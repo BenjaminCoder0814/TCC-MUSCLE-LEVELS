@@ -34,3 +34,4 @@ dev: setup
 down:
 	@echo "🛑 Stopping all services..."
 	docker compose down
+

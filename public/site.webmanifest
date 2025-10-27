@@ -1,0 +1,17 @@
+{
+  "name": "Muscle Levels",
+  "short_name": "MuscleLevels",
+  "description": "Transforme seu corpo com a Muscle Levels",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#6AD0F8",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}

@@ -2,11 +2,11 @@
 
 ## Project Overview
 
-Workout.cool is a fitness app with two main components:
+muscle-levels is a fitness app with two main components:
 
 - **Website** Next.js (App Router) web client with Server Actions Location: `/Users/mathiasbradiceanu/dev/perso/workout-cool-web`
 
-- **Mobile App** React Native app for iOS and Android Consumes the Workout.cool Next.js API Location:
+- **Mobile App** React Native app for iOS and Android Consumes the muscle-levels Next.js API Location:
   `/Users/mathiasbradiceanu/dev/perso/workout-cool-mobile`
 
 ## Architecture
@@ -58,3 +58,4 @@ Workout.cool is a fitness app with two main components:
 
 - **Website**: Vercel (Next.js)
 - **Mobile App**: Expo EAS Build & Updates
+

@@ -54,3 +54,4 @@ export const ResetPasswordEmail = ({ url }: ResetPasswordEmailProps) => (
 );
 
 export default ResetPasswordEmail; // Keep export consistent
+

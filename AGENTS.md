@@ -44,3 +44,4 @@ import { paths } from "@/shared/constants/paths";
 - **@tanstack/react-query** for client state management
 - **Shadcn UI + Radix + Tailwind** for styling (mobile-first)
 - Abstract external deps in `shared/lib/` (no direct fetch, Date, localStorage)
+

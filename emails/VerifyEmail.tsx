@@ -49,3 +49,4 @@ export const VerifyEmail = ({ url }: VerifyEmailProps) => (
     {/* Footer is now handled by BaseEmailLayout */}
   </BaseEmailLayout>
 );
+

@@ -33,11 +33,11 @@ Before you begin, ensure your server meets these requirements:
 
 ## 🚀 Quick Start
 
-**Prefer watching?** Watch our [3-minute video guide on self-hosting Workout.Cool](https://www.youtube.com/watch?v=HQecjb0CfAo):
+**Prefer watching?** Watch our [3-minute video guide on self-hosting muscle-levels](https://www.youtube.com/watch?v=HQecjb0CfAo):
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=HQecjb0CfAo">
-    <img src="https://img.youtube.com/vi/HQecjb0CfAo/maxresdefault.jpg" alt="Self-Host Workout.Cool in 3 Minutes Video Guide" style="max-width: 400px;">
+    <img src="https://img.youtube.com/vi/HQecjb0CfAo/maxresdefault.jpg" alt="Self-Host muscle-levels in 3 Minutes Video Guide" style="max-width: 400px;">
   </a>
 </p>
 
@@ -333,3 +333,4 @@ If you encounter issues:
 ---
 
 *Last updated: July 2025*
+

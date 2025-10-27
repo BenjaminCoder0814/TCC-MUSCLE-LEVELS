@@ -36,3 +36,4 @@ We credit contributors in:
 Thanks again for contributing to Workout Cool! 💪
 
 Questions? Just open an issue or ping a maintainer.
+

@@ -26,3 +26,4 @@ export default function DeleteAccountEmail({ email }: { email: string }) {
     </BaseEmailLayout>
   );
 }
+

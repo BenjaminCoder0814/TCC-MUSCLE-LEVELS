@@ -13,25 +13,26 @@ O **Muscle Levels** é um ecossistema fitness digital que conecta treino, nutri�
 - 🏆 **Ranking** - Compare seu desempenho
 - 💪 **Comunidade** - Conecte-se com outros atletas
 
+---
+
 ## 🚀 Tecnologias
 
-- **Frontend:** Next.js 15 (App Router), React 19, TypeScript
-- **Styling:** Tailwind CSS, DaisyUI, Framer Motion
-- **Backend:** Prisma ORM, PostgreSQL
-- **Auth:** Better Auth com Google OAuth
-- **UI Components:** Radix UI, shadcn/ui
-- **Charts:** Recharts
-- **Deployment:** Vercel
+- **Next.js 15** com App Router e Turbopack
+- **React 19** com Server Components  
+- **TypeScript** para tipagem estática
+- **Tailwind CSS + DaisyUI** para estilização
+- **Prisma + PostgreSQL** para banco de dados
+- **Better Auth** para autenticação segura
 
-## 🛠️ Desenvolvimento
+## ⚡ Instalação
 
 ### Pré-requisitos
 
 - Node.js 18+
+- pnpm ou npm
 - PostgreSQL
-- pnpm (recomendado)
 
-### Instalação
+### Setup
 
 ```bash
 # Clone o repositório
@@ -53,50 +54,22 @@ pnpm prisma migrate dev
 pnpm dev
 ```
 
-### Scripts Disponíveis
+Acesse: [http://localhost:3000](http://localhost:3000)
+
+## 🛠️ Comandos
 
 ```bash
-pnpm dev          # Servidor desenvolvimento (Turbopack)
-pnpm build        # Build para produção
-pnpm start        # Servidor produção
-pnpm lint         # Verificar código
-pnpm db:seed      # Popular banco com dados de exemplo
+pnpm dev          # Desenvolvimento
+pnpm build        # Build produção
+pnpm prisma studio # Interface do banco
 ```
 
 ## 📱 Funcionalidades
 
-### 🔍 Análise Corporal
-- Calculadora de IMC
-- Análise de composição corporal
-- Avaliação de flexibilidade
-- Teste de resistência
-
-### 🏋️ Treinos
-- Biblioteca de exercícios
-- Montagem de treinos personalizados
-- Acompanhamento de séries e repetições
-- Histórico de treinos
-
-### 🎯 Gamificação
-- Sistema de pontos por atividade
-- Conquistas e badges
-- Ranking de usuários
-- Desafios semanais
-
-### 📊 Dashboard
-- Métricas de progresso
-- Gráficos de evolução
-- Relatórios detalhados
-- Metas personalizadas
-
-## 🌟 Recursos Técnicos
-
-- **PWA Ready** - Instalável como app nativo
-- **Responsivo** - Otimizado para mobile e desktop
-- **Performance** - Server-side rendering com Next.js
-- **SEO Otimizado** - Meta tags dinâmicas
-- **Internacionalização** - Múltiplos idiomas
-- **Tema Dark/Light** - Preferência do usuário
+- **🎯 Criador de Treinos** - Seleção por músculos e equipamentos
+- **📊 Estatísticas** - Gráficos de volume e progressão  
+- **🔐 Autenticação** - Login seguro com Google OAuth
+- **🌍 Multilíngue** - Suporte a 6 idiomas
 
 ## 🔧 Configuração do Ambiente
 
@@ -116,45 +89,16 @@ GOOGLE_CLIENT_SECRET="your-google-client-secret"
 NEXT_PUBLIC_APP_URL="http://localhost:3000"
 ```
 
-## 📁 Estrutura do Projeto
-
-```
-muscle-levels/
-├── src/
-│   ├── app/                 # App Router (Next.js 15)
-│   ├── components/          # Componentes reutilizáveis
-│   ├── features/           # Funcionalidades por domínio
-│   ├── shared/             # Utilitários compartilhados
-│   └── widgets/            # Widgets complexos
-├── prisma/                 # Schema e migrações
-├── public/                 # Arquivos estáticos
-└── docs/                  # Documentação
-```
-
-## 🤝 Contribuindo
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-## 👤 Autor
+##  Autor
 
 **Benjamin Maciel**
 
 - GitHub: [@BenjaminCoder0814](https://github.com/BenjaminCoder0814)
 - Email: benjamin@muscle-levels.com
 
-## 🙏 Agradecimentos
+## � Licença
 
-- Comunidade Next.js
-- Equipe Tailwind CSS
-- Contribuidores open source
+MIT License - veja [LICENSE](LICENSE) para detalhes.
 
 ---
 
@@ -162,6 +106,6 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 **💪 Transforme seu corpo com Muscle Levels!**
 
-[🚀 Demo](https://muscle-levels.vercel.app) • [📖 Docs](./docs) • [🐛 Report Bug](../../issues)
+[⭐ Star no GitHub](https://github.com/BenjaminCoder0814/Muscle-Levels)
 
 </div>

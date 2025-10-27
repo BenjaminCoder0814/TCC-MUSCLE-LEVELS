@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
   // Redirect to Ezoic's ads.txt manager
   // Replace 19390 with your actual Ezoic Account ID if different
-  const ezoicAdsUrl = "https://srv.adstxtmanager.com/19390/workout.cool";
+  const ezoicAdsUrl = "https://srv.adstxtmanager.com/19390/muscle-levels";
 
   try {
     // Fetch the ads.txt content from Ezoic
@@ -42,3 +42,4 @@ export async function GET() {
     });
   }
 }
+

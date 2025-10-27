@@ -80,3 +80,4 @@ export const BaseEmailLayout = ({ previewText, children }: BaseEmailLayoutProps)
     </Tailwind>
   </Html>
 );
+

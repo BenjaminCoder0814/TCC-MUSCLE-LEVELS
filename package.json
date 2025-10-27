@@ -1,6 +1,6 @@
 {
   "name": "muscle-levels",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Muscle Levels — Plataforma de avaliação e performance fitness",
   "author": "Benjamin Maciel",
   "private": true,
@@ -151,3 +151,4 @@
     "typescript-eslint": "^8.29.0"
   }
 }
+

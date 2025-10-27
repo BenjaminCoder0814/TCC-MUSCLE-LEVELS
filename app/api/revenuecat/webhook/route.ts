@@ -240,3 +240,4 @@ async function handleProductChange(event: z.infer<typeof webhookEventSchema>["ev
     },
   });
 }
+
