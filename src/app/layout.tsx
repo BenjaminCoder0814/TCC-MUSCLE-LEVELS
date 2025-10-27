@@ -1,4 +1,4 @@
-import './globals.css'
+import '../shared/styles/globals-temp.css'
 import { ReactNode } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
