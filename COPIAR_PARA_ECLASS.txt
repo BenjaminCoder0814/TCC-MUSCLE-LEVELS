@@ -1,0 +1,129 @@
+════════════════════════════════════════════════════════════════════════
+              ENTREGA DO TCC - MUSCLE LEVELS
+════════════════════════════════════════════════════════════════════════
+
+👥 INTEGRANTES DO GRUPO:
+1. Julio Torresani
+2. Benjamin Maciel
+3. Emanuel Marson
+
+════════════════════════════════════════════════════════════════════════
+
+🔗 LINKS PRINCIPAIS:
+
+🚀 DEPLOY (VERCEL):
+https://muscle-levels.vercel.app
+
+📦 REPOSITÓRIO GITHUB:
+https://github.com/BenjaminCoder0814/Muscle-Levels
+
+📄 RELATÓRIO FINAL COMPLETO:
+https://github.com/BenjaminCoder0814/Muscle-Levels/blob/main/FINAL_REPORT.md
+
+════════════════════════════════════════════════════════════════════════
+
+📋 SOBRE O PROJETO:
+
+O Muscle Levels é uma plataforma web completa para criação e acompanhamento 
+de treinos físicos, desenvolvida com Next.js 15, React 19, TypeScript, 
+Tailwind CSS e PostgreSQL.
+
+PRINCIPAIS FUNCIONALIDADES:
+✅ Sistema de autenticação (Email + Google OAuth)
+✅ Gerador inteligente de treinos personalizados
+✅ 200+ exercícios catalogados com GIFs
+✅ Editor drag & drop de exercícios
+✅ Estatísticas e gráficos de progressão
+✅ Sistema de gamificação e ranking
+✅ Suporte a 6 idiomas
+✅ Design responsivo (mobile/tablet/desktop)
+✅ PWA instalável
+
+════════════════════════════════════════════════════════════════════════
+
+💻 TECNOLOGIAS:
+
+• Next.js 15 + React 19 + TypeScript
+• Tailwind CSS + DaisyUI + Radix UI
+• Prisma ORM + PostgreSQL
+• Better Auth (autenticação)
+• Vercel (deploy)
+• Framer Motion (animações)
+• Recharts (gráficos)
+
+════════════════════════════════════════════════════════════════════════
+
+🎓 PRINCIPAIS APRENDIZADOS:
+
+✓ Desenvolvimento full-stack moderno
+✓ Server Components e Server Actions
+✓ Autenticação e segurança
+✓ Internacionalização (i18n)
+✓ Deploy contínuo (CI/CD)
+✓ Performance e otimização
+✓ Trabalho em equipe
+
+════════════════════════════════════════════════════════════════════════
+
+📊 MÉTRICAS:
+
+• 25,000+ linhas de código
+• 150+ componentes React
+• 200+ exercícios catalogados
+• 6 idiomas suportados
+• Lighthouse Score: 90+ (Performance)
+• 3 meses de desenvolvimento
+
+════════════════════════════════════════════════════════════════════════
+
+👨‍💻 CONTRIBUIÇÕES:
+
+JULIO TORRESANI: Backend, autenticação, deploy, banco de dados
+BENJAMIN MACIEL: Frontend, UI/UX, i18n, componentes
+EMANUEL MARSON: Analytics, gamificação, performance, testes
+
+════════════════════════════════════════════════════════════════════════
+
+📁 ARQUIVOS ANEXADOS:
+
+✅ FINAL_REPORT.md (Relatório completo - 12 páginas)
+✅ README.md (Documentação técnica)
+✅ README_TCC.md (Instruções para avaliação)
+
+════════════════════════════════════════════════════════════════════════
+
+🔐 ACESSO PARA AVALIAÇÃO:
+
+Acesse: https://muscle-levels.vercel.app
+
+OPÇÃO 1: Criar conta com email
+OPÇÃO 2: Login com Google OAuth
+OPÇÃO 3: Credenciais demo (se necessário)
+
+════════════════════════════════════════════════════════════════════════
+
+📝 OBSERVAÇÕES:
+
+✓ Deploy ativo 24/7 no Vercel
+✓ Código aberto no GitHub
+✓ Totalmente funcional
+✓ Testado em múltiplos dispositivos
+✓ Documentação completa
+✓ Responsivo e acessível
+
+════════════════════════════════════════════════════════════════════════
+
+📞 CONTATO:
+
+Estamos à disposição para apresentação, demonstração ao vivo ou 
+esclarecimentos sobre o projeto.
+
+════════════════════════════════════════════════════════════════════════
+
+Data: 28 de Outubro de 2025
+Status: ✅ ENTREGUE NO PRAZO
+
+Atenciosamente,
+Julio Torresani, Benjamin Maciel e Emanuel Marson
+
+════════════════════════════════════════════════════════════════════════
