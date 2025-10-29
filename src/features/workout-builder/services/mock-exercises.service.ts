@@ -1,10 +1,14 @@
-// Mock service para exercícios quando o banco não está disponível
+// Mock service para exercícios - Gerado automaticamente do CSV
 export interface MockExercise {
   id: string;
   name: string;
   nameEn: string;
   description?: string;
   descriptionEn?: string;
+  fullVideoUrl?: string;
+  fullVideoImageUrl?: string;
+  introduction?: string;
+  introductionEn?: string;
   attributes: {
     attributeName: {
       name: string;
@@ -15,429 +19,90 @@ export interface MockExercise {
   }[];
 }
 
-const mockExercises: MockExercise[] = [
-  // CHEST EXERCISES
+export const mockExercises: MockExercise[] = [
   {
-    id: "1",
-    name: "Supino Reto com Barra",
-    nameEn: "Barbell Bench Press",
-    description: "Exercício fundamental para peitoral, ombros e tríceps",
-    descriptionEn: "Fundamental exercise for chest, shoulders and triceps",
+    id: "157",
+    name: "Fentes arrières à la barre",
+    nameEn: "Barbell Alternating Reverse Lunges",
+    description: "<p>Tenez-vous droit en tenant une barre placée sur l'arrière de vos épaules.</p><p>Faites un pas en arrière de 2 à 3 pieds avec un pied et abaissez votre corps au sol.</p><p>Votre genou arrière doit presque toucher le sol et votre genou avant doit être à un angle de 90 degrés.</p><p>Poussez vers le haut et revenez à la position de départ.</p><p>Répétez avec l'autre jambe.</p><p>Répétez le mouvement pour le nombre recommandé de répétitions, puis effectuez avec l'autre jambe.</p>",
+    descriptionEn: "<p>Stand upright holding a barbell placed across the back of your shoulders.</p><p>Step back 2-3 feet with one foot and lower your body to the ground.</p><p>Your back knee should almost touch the ground and your front knee should be at a 90-degree angle.</p><p>Push up to return to the starting position.</p><p>Repeat with the other leg.</p><p>Repeat the movement for the recommended number of repetitions, then switch to the other leg.</p>",
+    fullVideoUrl: "https://www.youtube.com/embed/NmfQzqGktgs?autoplay=1",
+    fullVideoImageUrl: "https://img.youtube.com/vi/NmfQzqGktgs/hqdefault.jpg",
+    introduction: "<p>Les <strong>fentes arrières à la barre</strong> sont un exercice efficace pour cibler les <strong>muscles des jambes</strong> et les <strong>fessiers</strong>. Idéal pour les sportifs intermédiaires à avancés, cet exercice aide à améliorer l'<em>équilibre</em> et la <em>stabilité</em> tout en augmentant la <strong>force des jambes</strong>.</p>",
+    introductionEn: "<p>The <strong>barbell alternating reverse lunges</strong> are an effective exercise to target the <strong>leg muscles</strong> and <strong>glutes</strong>. Ideal for intermediate to advanced athletes, this exercise helps improve <em>balance</em> and <em>stability</em> while increasing <strong>leg strength</strong>.</p>",
     attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "CHEST" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BARBELL" } }
+      { attributeName: { name: "STRENGTH" }, attributeValue: { value: "" } },
+      { attributeName: { name: "QUADRICEPS" }, attributeValue: { value: "" } },
+      { attributeName: { name: "GLUTES" }, attributeValue: { value: "" } },
+      { attributeName: { name: "HAMSTRINGS" }, attributeValue: { value: "" } },
+      { attributeName: { name: "BARBELL" }, attributeValue: { value: "" } },
+      { attributeName: { name: "BAR" }, attributeValue: { value: "" } },
+      { attributeName: { name: "COMPOUND" }, attributeValue: { value: "" } },
     ]
   },
   {
-    id: "2",
-    name: "Supino com Halteres",
-    nameEn: "Dumbbell Bench Press",
-    description: "Supino com halteres para maior amplitude de movimento",
-    descriptionEn: "Dumbbell bench press for greater range of motion",
+    id: "163",
+    name: "Tirage horizontal (front) corde à la poulie haute",
+    nameEn: "Facepulls",
+    description: "<p>Fixez une corde à la machine à câble à un réglage bas.</p><p>Tenez-vous face à la machine et tenez la corde avec une prise en pronation.</p><p>Reculez pour créer une tension dans le câble, les pieds écartés à la largeur des épaules.</p><p>Gardez le dos droit et penchez-vous légèrement en avant, en fléchissant légèrement les genoux.</p><p>Tirez la corde vers votre poitrine, en contractant vos omoplates ensemble.</p><p>Faites une pause à la fin du mouvement, puis relâchez lentement et étendez vos bras jusqu'à la position de départ.</p><p>Répétez le nombre souhaité de répétitions.</p>",
+    descriptionEn: "<p>Attach a rope to a low pulley cable machine.</p><p>Stand facing the machine and hold the rope with an overhand grip.</p><p>Step back to create tension in the cable, with feet shoulder-width apart.</p><p>Keep your back straight and lean slightly forward, bending your knees slightly.</p><p>Pull the rope towards your chest, squeezing your shoulder blades together.</p><p>Pause at the end of the movement, then slowly release and extend your arms back to the starting position.</p><p>Repeat for the desired number of repetitions.</p>",
+    fullVideoUrl: "https://www.youtube.com/embed/3ZViIERC1QQ?autoplay=1",
+    fullVideoImageUrl: "https://img.youtube.com/vi/3ZViIERC1QQ/hqdefault.jpg",
+    introduction: "<p>Le <strong>Tirage horizontal (front) corde à la poulie haute</strong>, ou <em>Facepull</em>, est un excellent <em>exercice d'isolement</em> pour renforcer les<strong> muscles de la partie postérieure des épaules</strong> et du <strong>haut du dos</strong>. Particulièrement prisé pour son efficacité à prévenir et combattre les déséquilibres posturaux, il est adapté tant aux débutants qu'aux pratiquants confirmés.</p>",
+    introductionEn: "<p>The <strong>Facepull</strong> or <em>Face Pull</em> is an excellent <em>isolation exercise</em> for strengthening the <strong>posterior shoulder muscles</strong> and the <strong>upper back</strong>. Highly valued for its effectiveness in preventing and combating postural imbalances, it is suitable for both beginners and advanced trainees.</p>",
     attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "CHEST" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "DUMBBELLS" } }
+      { attributeName: { name: "STRENGTH" }, attributeValue: { value: "" } },
+      { attributeName: { name: "SHOULDERS" }, attributeValue: { value: "" } },
+      { attributeName: { name: "FOREARMS" }, attributeValue: { value: "" } },
+      { attributeName: { name: "CABLE" }, attributeValue: { value: "" } },
+      { attributeName: { name: "ROPE" }, attributeValue: { value: "" } },
+      { attributeName: { name: "ISOLATION" }, attributeValue: { value: "" } },
     ]
   },
   {
-    id: "3",
-    name: "Flexão de Braços",
-    nameEn: "Push Ups",
-    description: "Exercício com peso corporal para peitoral",
-    descriptionEn: "Bodyweight exercise for chest",
+    id: "164",
+    name: "Sauts altérnés aux côtés du banc",
+    nameEn: "Bench Hops",
+    description: "<p>Commencez avec une box ou un banc devant vous. Tenez-vous debout, les pieds écartés de la largeur des épaules. ce sera votre position de départ.</p><p> Effectuez un court squat en préparation du saut</p><p> Sautez par-dessus le banc, atterrissez avec les genoux pliés, en absorbant l'impact à travers les jambes.</p>",
+    descriptionEn: "<p>Start with a box or bench in front of you. Stand with feet shoulder-width apart. This will be your starting position.</p><p> Perform a short squat in preparation for the jump.</p><p> Jump over the bench, landing with your knees bent, absorbing the impact through your legs.</p>",
+    fullVideoUrl: "https://www.youtube.com/embed/R3TCOHRwCl8?autoplay=1",
+    fullVideoImageUrl: "https://img.youtube.com/vi/R3TCOHRwCl8/hqdefault.jpg",
+    introduction: "<p>Les <strong>sauts altérnés aux côtés du banc</strong> sont un excellent moyen d'<em>améliorer la puissance explosive</em> et l'<em>agilité</em>. En sautant de manière répétitive d'un côté à l'autre du banc, vous ferez travailler vos <strong>quadriceps, ischio-jambiers et mollets</strong>. Ce mouvement intense est particulièrement bénéfique pour les athlètes et ceux cherchant à améliorer leur condition physique générale.</p>",
+    introductionEn: "<p><strong>Bench hops</strong> are an excellent way to <em>improve explosive power</em> and <em>agility</em>. By repeatedly hopping from side to side over a bench, you'll work your <strong>quads, hamstrings, and calves</strong>. This intense movement is especially beneficial for athletes and those looking to boost their overall fitness.</p>",
     attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "CHEST" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BODYWEIGHT" } }
-    ]
-  },
-  {
-    id: "4",
-    name: "Crucifixo com Halteres",
-    nameEn: "Dumbbell Flyes",
-    description: "Exercício de isolamento para peitoral",
-    descriptionEn: "Chest isolation exercise",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "CHEST" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "DUMBBELLS" } }
-    ]
-  },
-  {
-    id: "5",
-    name: "Supino Inclinado",
-    nameEn: "Incline Bench Press",
-    description: "Supino inclinado para peitoral superior",
-    descriptionEn: "Incline bench press for upper chest",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "CHEST" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BARBELL" } }
-    ]
-  },
-
-  // BACK EXERCISES
-  {
-    id: "6",
-    name: "Puxada na Polia Alta",
-    nameEn: "Lat Pulldown",
-    description: "Exercício para dorsais e bíceps",
-    descriptionEn: "Exercise for lats and biceps",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "BACK" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "CABLE" } }
-    ]
-  },
-  {
-    id: "7",
-    name: "Remada com Barra",
-    nameEn: "Barbell Row",
-    description: "Remada curvada com barra para dorsais",
-    descriptionEn: "Bent over barbell row for lats",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "BACK" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BARBELL" } }
-    ]
-  },
-  {
-    id: "8",
-    name: "Remada com Halteres",
-    nameEn: "Dumbbell Row",
-    description: "Remada unilateral com halter",
-    descriptionEn: "Single arm dumbbell row",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "BACK" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "DUMBBELLS" } }
-    ]
-  },
-  {
-    id: "9",
-    name: "Barra Fixa",
-    nameEn: "Pull Ups",
-    description: "Exercício com peso corporal para dorsais",
-    descriptionEn: "Bodyweight exercise for back",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "BACK" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BODYWEIGHT" } }
-    ]
-  },
-
-  // LEGS EXERCISES  
-  {
-    id: "10", 
-    name: "Agachamento com Barra",
-    nameEn: "Barbell Squat",
-    description: "Exercício fundamental para pernas e glúteos",
-    descriptionEn: "Fundamental exercise for legs and glutes",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "QUADRICEPS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BARBELL" } }
-    ]
-  },
-  {
-    id: "11",
-    name: "Levantamento Terra",
-    nameEn: "Deadlift", 
-    description: "Exercício completo para posterior da coxa e lombar",
-    descriptionEn: "Complete exercise for hamstrings and lower back",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "HAMSTRINGS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BARBELL" } }
-    ]
-  },
-  {
-    id: "12",
-    name: "Leg Press",
-    nameEn: "Leg Press",
-    description: "Exercício para quadríceps e glúteos na máquina",
-    descriptionEn: "Machine exercise for quads and glutes",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "QUADRICEPS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "MACHINE" } }
-    ]
-  },
-  {
-    id: "13",
-    name: "Mesa Flexora",
-    nameEn: "Leg Curl",
-    description: "Exercício isolado para posterior da coxa",
-    descriptionEn: "Isolation exercise for hamstrings",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "HAMSTRINGS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "MACHINE" } }
-    ]
-  },
-  {
-    id: "14",
-    name: "Cadeira Extensora",
-    nameEn: "Leg Extension",
-    description: "Exercício isolado para quadríceps",
-    descriptionEn: "Isolation exercise for quadriceps",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "QUADRICEPS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "MACHINE" } }
-    ]
-  },
-  {
-    id: "15",
-    name: "Agachamento Livre",
-    nameEn: "Bodyweight Squat",
-    description: "Agachamento com peso corporal",
-    descriptionEn: "Bodyweight squat exercise",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "QUADRICEPS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BODYWEIGHT" } }
-    ]
-  },
-
-  // SHOULDERS EXERCISES
-  {
-    id: "16",
-    name: "Desenvolvimento com Halteres",
-    nameEn: "Dumbbell Shoulder Press",
-    description: "Exercício para ombros e tríceps",
-    descriptionEn: "Exercise for shoulders and triceps",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "SHOULDERS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "DUMBBELLS" } }
-    ]
-  },
-  {
-    id: "17",
-    name: "Desenvolvimento com Barra",
-    nameEn: "Military Press",
-    description: "Desenvolvimento militar com barra",
-    descriptionEn: "Military press with barbell",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "SHOULDERS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BARBELL" } }
-    ]
-  },
-  {
-    id: "18",
-    name: "Elevação Lateral",
-    nameEn: "Lateral Raise",
-    description: "Elevação lateral com halteres para deltóide médio",
-    descriptionEn: "Lateral raise with dumbbells for middle deltoid",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "SHOULDERS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "DUMBBELLS" } }
-    ]
-  },
-  {
-    id: "19",
-    name: "Elevação Frontal",
-    nameEn: "Front Raise",
-    description: "Elevação frontal com halteres para deltóide anterior",
-    descriptionEn: "Front raise with dumbbells for anterior deltoid",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "SHOULDERS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "DUMBBELLS" } }
-    ]
-  },
-
-  // ARMS EXERCISES
-  {
-    id: "20",
-    name: "Rosca Direta com Barra",
-    nameEn: "Barbell Bicep Curl",
-    description: "Exercício isolado para bíceps",
-    descriptionEn: "Isolation exercise for biceps",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "BICEPS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BARBELL" } }
-    ]
-  },
-  {
-    id: "21",
-    name: "Rosca com Halteres",
-    nameEn: "Dumbbell Bicep Curl",
-    description: "Rosca alternada com halteres",
-    descriptionEn: "Alternating dumbbell bicep curls",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "BICEPS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "DUMBBELLS" } }
-    ]
-  },
-  {
-    id: "22",
-    name: "Tríceps Pulley",
-    nameEn: "Cable Tricep Extension",
-    description: "Exercício isolado para tríceps", 
-    descriptionEn: "Isolation exercise for triceps",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "TRICEPS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "CABLE" } }
-    ]
-  },
-  {
-    id: "23",
-    name: "Tríceps com Halteres",
-    nameEn: "Dumbbell Tricep Extension",
-    description: "Extensão de tríceps com halter",
-    descriptionEn: "Tricep extension with dumbbell",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "TRICEPS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "DUMBBELLS" } }
-    ]
-  },
-
-  // ABS EXERCISES
-  {
-    id: "24",
-    name: "Prancha",
-    nameEn: "Plank",
-    description: "Exercício isométrico para core",
-    descriptionEn: "Isometric exercise for core",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "ABS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BODYWEIGHT" } }
-    ]
-  },
-  {
-    id: "25",
-    name: "Abdominal Supra",
-    nameEn: "Crunches",
-    description: "Exercício básico para abdômen",
-    descriptionEn: "Basic abdominal exercise",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "ABS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BODYWEIGHT" } }
-    ]
-  },
-  {
-    id: "26",
-    name: "Elevação de Pernas",
-    nameEn: "Leg Raises",
-    description: "Elevação de pernas para abdômen inferior",
-    descriptionEn: "Leg raises for lower abs",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "ABS" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BODYWEIGHT" } }
-    ]
-  },
-
-  // GLUTES EXERCISES
-  {
-    id: "27",
-    name: "Hip Thrust",
-    nameEn: "Hip Thrust",
-    description: "Exercício específico para glúteos",
-    descriptionEn: "Specific exercise for glutes",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "GLUTES" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "BARBELL" } }
-    ]
-  },
-  {
-    id: "28",
-    name: "Agachamento Sumo",
-    nameEn: "Sumo Squat",
-    description: "Agachamento sumo com foco nos glúteos",
-    descriptionEn: "Sumo squat focusing on glutes",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "GLUTES" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "DUMBBELLS" } }
-    ]
-  },
-
-  // CALVES EXERCISES
-  {
-    id: "29",
-    name: "Panturrilha em Pé",
-    nameEn: "Standing Calf Raise",
-    description: "Exercício para panturrilha em pé",
-    descriptionEn: "Standing calf raise exercise",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "CALVES" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "MACHINE" } }
-    ]
-  },
-  {
-    id: "30",
-    name: "Panturrilha Sentado",
-    nameEn: "Seated Calf Raise",
-    description: "Exercício para panturrilha sentado",
-    descriptionEn: "Seated calf raise exercise",
-    attributes: [
-      { attributeName: { name: "PRIMARY_MUSCLE" }, attributeValue: { value: "CALVES" } },
-      { attributeName: { name: "EQUIPMENT" }, attributeValue: { value: "MACHINE" } }
+      { attributeName: { name: "PLYOMETRICS" }, attributeValue: { value: "" } },
+      { attributeName: { name: "CROSSFIT" }, attributeValue: { value: "" } },
+      { attributeName: { name: "CARDIO" }, attributeValue: { value: "" } },
+      { attributeName: { name: "FULL_BODY" }, attributeValue: { value: "" } },
+      { attributeName: { name: "BENCH" }, attributeValue: { value: "" } },
+      { attributeName: { name: "COMPOUND" }, attributeValue: { value: "" } },
     ]
   }
 ];
 
-// Export the mock exercises array for use in other parts of the application
-export { mockExercises };
-
-export function getMockExercises(equipment: string[], muscles: string[], limit: number = 3) {
-  console.log('🏃‍♂️ MOCK SERVICE: Parâmetros:', { equipment, muscles, limit });
-  console.log('🏃‍♂️ MOCK SERVICE: Total de exercícios mock:', mockExercises.length);
+export const getMockExercises = (equipment?: string[], muscles?: string[], limit?: number) => {
+  let filtered = mockExercises;
   
-  const filteredExercises = mockExercises.filter(exercise => {
-    const exerciseEquipment = exercise.attributes.find(
-      attr => attr.attributeName.name === "EQUIPMENT"
-    )?.attributeValue.value;
-    
-    const primaryMuscle = exercise.attributes.find(
-      attr => attr.attributeName.name === "PRIMARY_MUSCLE" 
-    )?.attributeValue.value;
-
-    const equipmentMatch = equipment.length === 0 || equipment.includes(exerciseEquipment || '');
-    const muscleMatch = muscles.length === 0 || muscles.includes(primaryMuscle || '');
-
-    const match = equipmentMatch && muscleMatch;
-    
-    if (match) {
-      console.log('🏃‍♂️ MOCK SERVICE: Exercício encontrado:', exercise.name, 'para', primaryMuscle, 'com', exerciseEquipment);
-    }
-
-    return match;
-  });
-
-  console.log('🏃‍♂️ MOCK SERVICE: Exercícios filtrados:', filteredExercises.length);
-
-  // Shuffle and limit results
-  const shuffled = [...filteredExercises].sort(() => Math.random() - 0.5);
+  if (equipment && equipment.length > 0) {
+    filtered = filtered.filter(ex => {
+      const exEquipment = ex.attributes.find(a => a.attributeName.name === 'EQUIPMENT')?.attributeValue.value;
+      return equipment.includes(exEquipment || '');
+    });
+  }
   
-  // Group by muscle for the expected format and transform to ExerciseWithAttributes
-  const exercisesByMuscle = muscles.map(muscle => {
-    const muscleExercises = shuffled
-      .filter(exercise =>
-        exercise.attributes.find(
-          attr => attr.attributeName.name === "PRIMARY_MUSCLE" && 
-                   attr.attributeValue.value === muscle
-        )
-      )
-      .slice(0, limit)
-      .map(mockExercise => ({
-        // Transform MockExercise to ExerciseWithAttributes
-        id: mockExercise.id,
-        name: mockExercise.name,
-        nameEn: mockExercise.nameEn,
-        description: mockExercise.description || '',
-        descriptionEn: mockExercise.descriptionEn || '',
-        fullVideoUrl: null,
-        fullVideoImageUrl: null,
-        introduction: null,
-        introductionEn: null,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        attributes: mockExercise.attributes.map((attr, index) => ({
-          id: `${mockExercise.id}-attr-${index}`,
-          exerciseId: mockExercise.id,
-          attributeNameId: `attr-name-${attr.attributeName.name}`,
-          attributeValueId: `attr-value-${attr.attributeValue.value}`,
-          attributeName: attr.attributeName.name as any,
-          attributeValue: attr.attributeValue.value as any
-        }))
-      }));
-
-    console.log('🏃‍♂️ MOCK SERVICE: Músculo', muscle, 'tem', muscleExercises.length, 'exercícios transformados');
-
-    return {
-      muscle,
-      exercises: muscleExercises
-    };
-  }).filter(group => group.exercises.length > 0);
-
-  console.log('🏃‍♂️ MOCK SERVICE: Resultado final:', exercisesByMuscle.length, 'grupos de músculos');
+  if (muscles && muscles.length > 0) {
+    filtered = filtered.filter(ex => {
+      const primaryMuscle = ex.attributes.find(a => a.attributeName.name === 'PRIMARY_MUSCLE')?.attributeValue.value;
+      return muscles.includes(primaryMuscle || '');
+    });
+  }
   
-  return exercisesByMuscle;
-}
+  if (limit) {
+    filtered = filtered.slice(0, limit);
+  }
+  
+  return filtered.map(ex => ({
+    ...ex,
+    fullVideoImageUrl: ex.fullVideoImageUrl || null,
+  }));
+};
