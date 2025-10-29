@@ -3,7 +3,7 @@ import { MetadataRoute } from "next/types";
 import { getSitemapData } from "@/features/programs/actions/get-sitemap-data.action";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://www.muscle-levels";
+  const baseUrl = "https://muscle-levels.vercel.app";
   const currentDate = new Date().toISOString();
 
   // Static routes with locale support

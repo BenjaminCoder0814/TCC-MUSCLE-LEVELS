@@ -10,7 +10,8 @@ import { DialogRenderer } from "@/features/dialogs-provider/DialogProvider";
 import { useAutoLocale } from "@/entities/user/model/use-auto-locale";
 import { ToastSonner } from "@/components/ui/ToastSonner";
 import { Toaster } from "@/components/ui/toaster";
-import { ThemeProvider } from "@/components/ui/theme-provider";
+import { ThemeProvider as NextThemeProvider } from "@/components/ui/theme-provider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 import type { PropsWithChildren } from "react";
 
@@ -28,14 +29,16 @@ export const Providers = ({ children, locale }: PropsWithChildren<{ locale: stri
       <NuqsAdapter>
         <QueryClientProvider client={queryClient}>
           <I18nProviderClient locale={locale}>
-            <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange enableSystem>
-              <LocaleDetector />
-              <Toaster />
-              <ToastSonner />
-              <DialogRenderer />
-              <ReactQueryDevtools initialIsOpen={false} />
-              {children}
-            </ThemeProvider>
+            <NextThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange enableSystem>
+              <ThemeProvider>
+                <LocaleDetector />
+                <Toaster />
+                <ToastSonner />
+                <DialogRenderer />
+                <ReactQueryDevtools initialIsOpen={false} />
+                {children}
+              </ThemeProvider>
+            </NextThemeProvider>
           </I18nProviderClient>
         </QueryClientProvider>
       </NuqsAdapter>

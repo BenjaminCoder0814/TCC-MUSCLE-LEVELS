@@ -6,17 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Garantir que html e body ocupem 100% da tela */
-html, body, #__next, #__nuxt {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
 @plugin "daisyui";
 
 /* Google AdSense Styles - Prevent "No slot size for availableWidth=0" error */
@@ -270,7 +259,30 @@ body {
   }
 }
 
-/* Classe ratio-dynamic removida para permitir layout full-width */
+.ratio-dynamic {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* Optionnel: arrondis, bordures, etc. */
+  border-radius: 2rem;
+  overflow: hidden;
+  background: white;
+  border: 10px solid black;
+  padding: 0.5rem;
+  /* Pour l'effet responsive: */
+  width: 100vw;
+  height: calc(100vw / (9 / 18));
+  max-width: 400px; /* ou ce que tu veux */
+  max-height: 80vh;
+}
+
+@media (min-aspect-ratio: 9/18) {
+  .ratio-dynamic {
+    width: calc(100vh * (9 / 18));
+    height: 100vh;
+  }
+}
 
 .horizontal header .sidebar {
   scrollbar-width: thin;

@@ -23,16 +23,16 @@ export default async function AuthLayout(props: LayoutParams<{}>) {
 
   return (
     <>
-      <div className="h-full flex">
+      <div className="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         {searchParams.error && (
-          <Alert className="mb-4" variant="error">
+          <Alert className="mb-4 max-w-md mx-auto" variant="error">
             <AlertTitle>{translatedError}</AlertTitle>
             <AlertDescription>{t("signin_error_subtitle")}</AlertDescription>
           </Alert>
         )}
 
-        <div className="flex flex-1 items-center justify-center">
-          <div className="w-full max-w-md">{props.children}</div>
+        <div className="sm:mx-auto sm:w-full sm:max-w-md">
+          {props.children}
         </div>
       </div>
     </>

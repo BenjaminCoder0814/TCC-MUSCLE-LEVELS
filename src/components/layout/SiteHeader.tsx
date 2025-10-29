@@ -3,28 +3,28 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, User, ShoppingCart, Zap } from "lucide-react";
+import { Menu, X, User, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { useCurrentLocale } from "locales/client";
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const locale = useCurrentLocale();
 
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "Autoanálise", href: "/tools" },
-    { name: "Treinos", href: "/workout-builder" },
-    { name: "Profissionais", href: "/professionals" },
-    { name: "Loja", href: "/shop" },
-    { name: "Blog", href: "/blog" },
-    { name: "Planos", href: "/premium" },
-    { name: "Contato", href: "/contact" },
+    { name: "Início", href: `/${locale}` },
+    { name: "Auto-Análise", href: `/${locale}/tools` },
+    { name: "Treinos", href: `/${locale}/programs` },
+    { name: "Profissionais", href: `/${locale}/leaderboard` },
+    { name: "Premium", href: `/${locale}/premium` },
+    { name: "Estatísticas", href: `/${locale}/statistics` },
+    { name: "Sobre", href: `/${locale}/about` },
   ];
 
   const isActive = (href: string) => {
-    if (href === "/") {
-      return pathname === "/";
+    if (href === `/${locale}`) {
+      return pathname === `/${locale}` || pathname === "/";
     }
     return pathname.startsWith(href);
   };
@@ -34,7 +34,7 @@ export function SiteHeader() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+          <Link href={`/${locale}`} className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div className="w-10 h-10 bg-gradient-to-br from-[#6AD0F8] to-blue-600 rounded-lg flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-xl">💪</span>
             </div>
@@ -69,17 +69,6 @@ export function SiteHeader() {
               <span className="text-sm font-semibold text-foreground">1,250</span>
               <span className="text-xs text-muted-foreground">pts</span>
             </div>
-
-            {/* Cart */}
-            <Button variant="ghost" size="small" className="relative">
-              <ShoppingCart className="w-5 h-5" />
-              <Badge 
-                variant="danger" 
-                className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 text-xs flex items-center justify-center"
-              >
-                3
-              </Badge>
-            </Button>
 
             {/* User Menu */}
             <Button variant="ghost" size="small">

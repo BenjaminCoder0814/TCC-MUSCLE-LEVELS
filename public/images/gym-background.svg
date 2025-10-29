@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <!-- Gradiente principal -->
+    <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:0.7" />
+    </linearGradient>
+    
+    <!-- Gradiente de overlay -->
+    <radialGradient id="overlay" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.8" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background base -->
+  <rect width="100%" height="100%" fill="url(#mainGrad)"/>
+  
+  <!-- Formas geométricas representando equipamentos de academia -->
+  <g opacity="0.1" fill="#ffffff">
+    <!-- Halteres -->
+    <rect x="200" y="200" width="40" height="8" rx="4"/>
+    <circle cx="220" r="20" cy="200"/>
+    <circle cx="220" r="20" cy="208"/>
+    
+    <rect x="1400" y="600" width="40" height="8" rx="4"/>
+    <circle cx="1420" r="20" cy="600"/>
+    <circle cx="1420" r="20" cy="608"/>
+    
+    <!-- Barras -->
+    <rect x="400" y="400" width="200" height="8" rx="4"/>
+    <circle cx="400" r="25" cy="404"/>
+    <circle cx="600" r="25" cy="404"/>
+    
+    <!-- Discos de peso -->
+    <circle cx="800" cy="300" r="60" stroke="#ffffff" stroke-width="4" fill="none"/>
+    <circle cx="800" cy="300" r="40" stroke="#ffffff" stroke-width="2" fill="none"/>
+    <circle cx="800" cy="300" r="20" fill="#ffffff"/>
+    
+    <circle cx="1200" cy="200" r="50" stroke="#ffffff" stroke-width="3" fill="none"/>
+    <circle cx="1200" cy="200" r="35" stroke="#ffffff" stroke-width="2" fill="none"/>
+    
+    <!-- Kettlebells -->
+    <circle cx="300" cy="700" r="30"/>
+    <rect x="290" y="670" width="20" height="30" rx="10"/>
+    
+    <circle cx="1500" cy="400" r="25"/>
+    <rect x="1492" y="375" width="16" height="25" rx="8"/>
+  </g>
+  
+  <!-- Padrão de pontos para textura -->
+  <g opacity="0.05">
+    <circle cx="100" cy="100" r="3" fill="#ffffff"/>
+    <circle cx="300" cy="150" r="2" fill="#ffffff"/>
+    <circle cx="500" cy="120" r="2.5" fill="#ffffff"/>
+    <circle cx="700" cy="180" r="2" fill="#ffffff"/>
+    <circle cx="900" cy="140" r="3" fill="#ffffff"/>
+    <circle cx="1100" cy="160" r="2" fill="#ffffff"/>
+    <circle cx="1300" cy="130" r="2.5" fill="#ffffff"/>
+    <circle cx="1500" cy="170" r="2" fill="#ffffff"/>
+    <circle cx="1700" cy="110" r="3" fill="#ffffff"/>
+    
+    <circle cx="150" cy="300" r="2" fill="#ffffff"/>
+    <circle cx="350" cy="280" r="2.5" fill="#ffffff"/>
+    <circle cx="550" cy="320" r="2" fill="#ffffff"/>
+    <circle cx="750" cy="290" r="3" fill="#ffffff"/>
+    <circle cx="950" cy="310" r="2" fill="#ffffff"/>
+    <circle cx="1150" cy="270" r="2.5" fill="#ffffff"/>
+    <circle cx="1350" cy="330" r="2" fill="#ffffff"/>
+    <circle cx="1550" cy="280" r="3" fill="#ffffff"/>
+    <circle cx="1750" cy="300" r="2" fill="#ffffff"/>
+  </g>
+  
+  <!-- Overlay escuro -->
+  <rect width="100%" height="100%" fill="url(#overlay)"/>
+</svg>

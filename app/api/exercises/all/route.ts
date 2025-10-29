@@ -2,6 +2,7 @@ import { z } from "zod";
 import { NextRequest, NextResponse } from "next/server";
 
 import { prisma } from "@/shared/lib/prisma";
+import { mockExercises } from "@/features/workout-builder/services/mock-exercises.service";
 
 const paginationSchema = z.object({
   page: z.coerce.number().min(1).default(1),
@@ -13,13 +14,7 @@ const paginationSchema = z.object({
 
 export async function GET(request: NextRequest) {
   try {
-    // Get user session for authentication
-    // const session = await getMobileCompatibleSession(request);
-    // const user = session?.user;
-
-    // if (!user) {
-    //   return NextResponse.json({ error: "UNAUTHORIZED", message: "Authentication required" }, { status: 401 });
-    // }
+    console.log("📦 API /api/exercises/all called");
 
     // Parse query parameters
     const { searchParams } = new URL(request.url);
@@ -44,6 +39,68 @@ export async function GET(request: NextRequest) {
     }
 
     const { page, limit, search, muscle, equipment } = parsed.data;
+
+    // TRY DATABASE FIRST, FALLBACK TO MOCK
+    try {
+      await prisma.$connect();
+      console.log("✅ Database connected, using real data");
+    } catch (dbError) {
+      console.log("📦 Database not available, using mock data");
+      
+      // Use mock data
+      let filteredExercises = [...mockExercises];
+
+      // Apply search filter
+      if (search) {
+        const searchLower = search.toLowerCase();
+        filteredExercises = filteredExercises.filter(
+          (ex) => 
+            ex.name.toLowerCase().includes(searchLower) || 
+            ex.nameEn.toLowerCase().includes(searchLower)
+        );
+      }
+
+      // Apply muscle filter
+      if (muscle) {
+        filteredExercises = filteredExercises.filter((ex) =>
+          ex.attributes.some(
+            (attr: any) =>
+              attr.attributeName.name === "PRIMARY_MUSCLE" && attr.attributeValue.value === muscle
+          )
+        );
+      }
+
+      // Apply equipment filter
+      if (equipment) {
+        filteredExercises = filteredExercises.filter((ex) =>
+          ex.attributes.some(
+            (attr: any) =>
+              attr.attributeName.name === "EQUIPMENT" && attr.attributeValue.value === equipment
+          )
+        );
+      }
+
+      // Pagination
+      const totalCount = filteredExercises.length;
+      const skip = (page - 1) * limit;
+      const paginatedExercises = filteredExercises.slice(skip, skip + limit);
+      const totalPages = Math.ceil(totalCount / limit);
+
+      const response = {
+        data: paginatedExercises,
+        pagination: {
+          page,
+          limit,
+          totalCount,
+          totalPages,
+          hasNextPage: page < totalPages,
+          hasPreviousPage: page > 1,
+        },
+      };
+
+      console.log(`✅ Returning ${paginatedExercises.length} mock exercises`);
+      return NextResponse.json(response);
+    }
     const skip = (page - 1) * limit;
 
     // Build where clause for filtering

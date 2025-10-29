@@ -17,13 +17,18 @@ function detectUserLocale(request: NextRequest): string {
     })
     .sort((a, b) => b.quality - a.quality);
 
-  // Map browser locales to supported locales
-  const supportedLocales = ["en", "fr", "es", "zh-cn", "ru", "pt"];
+  // Map browser locales to supported locales - must match client.ts
+  const supportedLocales = ["en", "fr", "es", "zh-CN", "ru", "pt"];
 
   for (const { locale } of languages) {
     // Exact match
     if (supportedLocales.includes(locale)) {
-      return locale === "zh-cn" ? "zh-CN" : locale;
+      return locale;
+    }
+    
+    // Handle lowercase zh-cn -> zh-CN
+    if (locale === "zh-cn") {
+      return "zh-CN";
     }
 
     // Language match (fr-FR -> fr)

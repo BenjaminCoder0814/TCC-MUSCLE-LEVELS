@@ -1,11 +1,9 @@
 "use server";
 
 import { z } from "zod";
-import { ExerciseAttributeNameEnum, ExerciseAttributeValueEnum } from "@prisma/client";
-
-import { prisma } from "@/shared/lib/prisma";
+import { ExerciseAttributeValueEnum } from "@prisma/client";
 import { actionClient } from "@/shared/api/safe-actions";
-
+import { mockExercises } from "../services/mock-exercises.service";
 
 const getExercisesByMuscleSchema = z.object({
   equipment: z.array(z.nativeEnum(ExerciseAttributeValueEnum)),
@@ -16,101 +14,51 @@ export const getExercisesByMuscleAction = actionClient
   .action(async ({ parsedInput }) => {
     const { equipment } = parsedInput;
 
-    try {
-      const [primaryMuscleAttributeName, equipmentAttributeName] = await Promise.all([
-        prisma.exerciseAttributeName.findUnique({
-          where: { name: ExerciseAttributeNameEnum.PRIMARY_MUSCLE },
-        }),
-        prisma.exerciseAttributeName.findUnique({
-          where: { name: ExerciseAttributeNameEnum.EQUIPMENT },
-        }),
-      ]);
+    console.log("🔍 getExercisesByMuscleAction called with equipment:", equipment);
 
-      if (!primaryMuscleAttributeName || !equipmentAttributeName) {
-        throw new Error("Missing attributes in database");
-      }
+    // Use mock data
+    const muscleGroups = [
+      "CHEST",
+      "BACK", 
+      "SHOULDERS",
+      "BICEPS",
+      "TRICEPS",
+      "QUADRICEPS",
+      "HAMSTRINGS",
+      "GLUTES",
+      "CALVES",
+      "ABDOMINALS",
+      "FOREARMS",
+      "TRAPS",
+      "LATS",
+    ];
 
-      const muscleGroups = [
-        ExerciseAttributeValueEnum.CHEST,
-        ExerciseAttributeValueEnum.BACK,
-        ExerciseAttributeValueEnum.SHOULDERS,
-        ExerciseAttributeValueEnum.BICEPS,
-        ExerciseAttributeValueEnum.TRICEPS,
-        ExerciseAttributeValueEnum.QUADRICEPS,
-        ExerciseAttributeValueEnum.HAMSTRINGS,
-        ExerciseAttributeValueEnum.GLUTES,
-        ExerciseAttributeValueEnum.CALVES,
-        ExerciseAttributeValueEnum.ABDOMINALS,
-        ExerciseAttributeValueEnum.FOREARMS,
-        ExerciseAttributeValueEnum.TRAPS,
-        ExerciseAttributeValueEnum.LATS,
-      ];
+    const exercisesByMuscle = muscleGroups.map((muscle) => {
+      const muscleExercises = mockExercises.filter((exercise) => {
+        const primaryMuscle = exercise.attributes.find(
+          (attr) => attr.attributeName.name === "PRIMARY_MUSCLE"
+        )?.attributeValue.value;
 
-      const exercisesByMuscle = await Promise.all(
-        muscleGroups.map(async (muscle) => {
-          const exercises = await prisma.exercise.findMany({
-            where: {
-              AND: [
-                {
-                  attributes: {
-                    some: {
-                      attributeNameId: primaryMuscleAttributeName.id,
-                      attributeValue: {
-                        value: muscle,
-                      },
-                    },
-                  },
-                },
-                {
-                  attributes: {
-                    some: {
-                      attributeNameId: equipmentAttributeName.id,
-                      attributeValue: {
-                        value: {
-                          in: equipment,
-                        },
-                      },
-                    },
-                  },
-                },
-                // Exclude stretching exercises
-                {
-                  NOT: {
-                    attributes: {
-                      some: {
-                        attributeValue: {
-                          value: "STRETCHING",
-                        },
-                      },
-                    },
-                  },
-                },
-              ],
-            },
-            include: {
-              attributes: {
-                include: {
-                  attributeName: true,
-                  attributeValue: true,
-                },
-              },
-            },
-            orderBy: {
-              nameEn: "asc",
-            },
-          });
+        const exerciseEquipment = exercise.attributes.find(
+          (attr) => attr.attributeName.name === "EQUIPMENT"
+        )?.attributeValue.value;
 
-          return {
-            muscle,
-            exercises,
-          };
-        })
-      );
+        const muscleMatch = primaryMuscle === muscle;
+        const equipmentMatch = equipment.length === 0 || equipment.includes(exerciseEquipment as any);
 
-      // Filter out muscle groups with no exercises
-      return exercisesByMuscle.filter(group => group.exercises.length > 0);
-    } catch (error) {
-      console.error("Error fetching exercises by muscle:", error);
-      throw new Error("Error fetching exercises by muscle");
-    }
+        return muscleMatch && equipmentMatch;
+      });
+
+      return {
+        muscle,
+        exercises: muscleExercises,
+        count: muscleExercises.length,
+      };
+    });
+
+    // Filter out muscle groups with no exercises
+    const filtered = exercisesByMuscle.filter((group) => group.count > 0);
+
+    console.log("✅ Returning exercises for", filtered.length, "muscle groups");
+    return filtered;
   });

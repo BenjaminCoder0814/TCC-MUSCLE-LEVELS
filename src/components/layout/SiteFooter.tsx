@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Twitter, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Dumbbell, Twitter, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -34,7 +34,7 @@ export function SiteFooter() {
   };
 
   const socialLinks = [
-    { name: "GitHub", icon: Github, href: "https://github.com/BenjaminCoder0814", color: "hover:text-gray-400" },
+    { name: "Fitness", icon: Dumbbell, href: "#", color: "hover:text-blue-400" },
     { name: "Twitter", icon: Twitter, href: "https://twitter.com/benjamincoder", color: "hover:text-blue-400" },
     { name: "Instagram", icon: Instagram, href: "https://instagram.com/muscle.levels", color: "hover:text-pink-400" },
     { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/in/benjamin-maciel", color: "hover:text-blue-600" },

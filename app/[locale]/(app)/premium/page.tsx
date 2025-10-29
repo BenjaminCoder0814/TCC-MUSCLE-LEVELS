@@ -3,19 +3,19 @@ import { Metadata } from "next";
 import { PremiumUpgradeCard } from "@/features/premium/ui/premium-upgrade-card";
 
 export const metadata: Metadata = {
-  title: "Premium Plans - Train freely, support the mission",
+  title: "Planos Premium - Muscle Levels",
   description:
-    "Join thousands of fitness enthusiasts who believe in open-source training freedom. Support our mission while unlocking advanced features.",
-  keywords: ["premium", "fitness", "workout", "open-source", "subscription", "training"],
+    "Desbloqueie recursos exclusivos e alcance seus objetivos fitness mais rapidamente com nossos planos premium.",
+  keywords: ["premium", "fitness", "musculação", "treino", "assinatura", "muscle levels"],
   openGraph: {
-    title: "Premium Plans - Support the Workout.cool Mission 💪",
-    description: "For passionate fitness enthusiasts who believe in open-source and training freedom. Core features always free!",
+    title: "Planos Premium - Muscle Levels 💪",
+    description: "Recursos exclusivos para entusiastas do fitness que querem acelerar seus resultados!",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Premium Plans - Workout.cool",
-    description: "Train freely, support the mission. Join the passionate fitness community!",
+    title: "Planos Premium - Muscle Levels",
+    description: "Acelere seus resultados com recursos premium exclusivos!",
   },
 };
 

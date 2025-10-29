@@ -21,7 +21,7 @@ import { VerticalLeftBanner, VerticalRightBanner, AdBlockerForPremium } from "@/
 import type { ReactElement } from "react";
 import type { Metadata } from "next";
 
-import "@/shared/styles/globals.css";
+import "@/shared/styles/globals-clean.css";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -162,15 +162,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       ],
     },
     alternates: {
-      canonical: "https://www.workout.cool",
+      canonical: "https://www.muscle-levels.com",
       languages: {
-        "fr-FR": "https://www.workout.cool/fr",
-        "en-US": "https://www.workout.cool/en",
-        "es-ES": "https://www.workout.cool/es",
-        "pt-PT": "https://www.workout.cool/pt",
-        "ru-RU": "https://www.workout.cool/ru",
-        "zh-CN": "https://www.workout.cool/zh-CN",
-        "x-default": "https://www.workout.cool",
+        "fr-FR": "https://www.muscle-levels.com/fr",
+        "en-US": "https://www.muscle-levels.com/en",
+        "es-ES": "https://www.muscle-levels.com/es",
+        "pt-PT": "https://www.muscle-levels.com/pt",
+        "ru-RU": "https://www.muscle-levels.com/ru",
+        "zh-CN": "https://www.muscle-levels.com/zh-CN",
+        "x-default": "https://www.muscle-levels.com",
       },
     },
     authors: [{ name: SiteConfig.company.name, url: getServerUrl() }],
@@ -277,7 +277,7 @@ export default async function RootLayout({ params, children }: RootLayoutProps) 
           {/* PWA Meta Tags */}
           <meta content="yes" name="apple-mobile-web-app-capable" />
           <meta content="default" name="apple-mobile-web-app-status-bar-style" />
-          <meta content="Workout Cool" name="apple-mobile-web-app-title" />
+          <meta content="Muscle Levels" name="apple-mobile-web-app-title" />
           <meta content="yes" name="mobile-web-app-capable" />
           <meta content="#FF5722" name="msapplication-TileColor" />
           <meta content="/android-chrome-192x192.png" name="msapplication-TileImage" />
@@ -289,13 +289,13 @@ export default async function RootLayout({ params, children }: RootLayoutProps) 
           <link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="preload" />
 
           {/* Alternate hreflang for i18n */}
-          <link href="https://www.workout.cool/fr" hrefLang="fr" rel="alternate" />
-          <link href="https://www.workout.cool/en" hrefLang="en" rel="alternate" />
-          <link href="https://www.workout.cool/es" hrefLang="es" rel="alternate" />
-          <link href="https://www.workout.cool/pt" hrefLang="pt" rel="alternate" />
-          <link href="https://www.workout.cool/ru" hrefLang="ru" rel="alternate" />
-          <link href="https://www.workout.cool/zh-CN" hrefLang="zh-CN" rel="alternate" />
-          <link href="https://www.workout.cool" hrefLang="x-default" rel="alternate" />
+          <link href="https://www.muscle-levels.com/fr" hrefLang="fr" rel="alternate" />
+          <link href="https://www.muscle-levels.com/en" hrefLang="en" rel="alternate" />
+          <link href="https://www.muscle-levels.com/es" hrefLang="es" rel="alternate" />
+          <link href="https://www.muscle-levels.com/pt" hrefLang="pt" rel="alternate" />
+          <link href="https://www.muscle-levels.com/ru" hrefLang="ru" rel="alternate" />
+          <link href="https://www.muscle-levels.com/zh-CN" hrefLang="zh-CN" rel="alternate" />
+          <link href="https://www.muscle-levels.com" hrefLang="x-default" rel="alternate" />
 
           {/* Theme color for PWA */}
           <meta content="#FF5722" name="theme-color" />

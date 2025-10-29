@@ -3,16 +3,18 @@
 import { useBoolean } from "usehooks-ts";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Plus, Loader2, X, ChevronDown, ChevronUp } from "lucide-react";
+import { Plus, Loader2, X, ChevronDown, ChevronUp, Info } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { ExerciseAttributeValueEnum } from "@prisma/client";
 
 import { useCurrentLocale, useI18n } from "locales/client";
 import { FavoriteButton } from "@/features/workout-builder/ui/favorite-button";
 import { useFavoritesModal } from "@/features/workout-builder/hooks/use-favorites-modal";
+import { ExerciseVideoModal } from "@/features/workout-builder/ui/exercise-video-modal";
 
 import { useWorkoutBuilderStore } from "../model/workout-builder.store";
 import { getExercisesByMuscleAction } from "../actions/get-exercises-by-muscle.action";
+import type { ExerciseWithAttributes as ExerciseType } from "@/entities/exercise/types/exercise.types";
 
 interface AddExerciseModalProps {
   isOpen: boolean;
@@ -25,6 +27,11 @@ interface ExerciseWithAttributes {
   name: string;
   nameEn: string;
   fullVideoImageUrl: string | null;
+  fullVideoUrl?: string | null;
+  introduction?: string | null;
+  introductionEn?: string | null;
+  description?: string;
+  descriptionEn?: string | null;
   attributes: Array<{
     attributeName: { name: string };
     attributeValue: { value: string };
@@ -41,6 +48,8 @@ export const AddExerciseModal = ({ isOpen, onClose, selectedEquipment }: AddExer
   const locale = useCurrentLocale();
   const [expandedMuscle, setExpandedMuscle] = useState<string | null>(null);
   const { value: isFavoritesExpanded, setTrue: openFavorites, setFalse: closeFavorites } = useBoolean(false);
+  const [selectedExerciseForVideo, setSelectedExerciseForVideo] = useState<ExerciseWithAttributes | null>(null);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   const { exercisesByMuscle, setExercisesByMuscle, setExercisesOrder, exercisesOrder } = useWorkoutBuilderStore();
   const { data: muscleGroups, isLoading } = useQuery({
@@ -98,6 +107,12 @@ export const AddExerciseModal = ({ isOpen, onClose, selectedEquipment }: AddExer
     setExercisesOrder(newExercisesOrder);
 
     onClose();
+  };
+
+  const handleShowInstructions = (exercise: ExerciseWithAttributes, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setSelectedExerciseForVideo(exercise);
+    setIsVideoModalOpen(true);
   };
 
   const getMuscleLabel = (muscle: string) => {
@@ -333,6 +348,13 @@ export const AddExerciseModal = ({ isOpen, onClose, selectedEquipment }: AddExer
                                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors leading-tight">
                                   {locale === "fr" ? exercise.name : exercise.nameEn || exercise.name}
                                 </h3>
+                                <button
+                                  className="text-xs text-blue-600 dark:text-blue-400 underline hover:text-blue-700 dark:hover:text-blue-300 mt-1 flex items-center gap-1"
+                                  onClick={(e) => handleShowInstructions(exercise, e)}
+                                >
+                                  <Info className="h-3 w-3" />
+                                  {t("workout_builder.session.see_instructions")}
+                                </button>
                               </div>
 
                               {/* Bouton d'ajout moderne */}
@@ -371,6 +393,15 @@ export const AddExerciseModal = ({ isOpen, onClose, selectedEquipment }: AddExer
         </div>
       </div>
       <div className="modal-backdrop bg-black/60 backdrop-blur-sm" onClick={onClose} />
+      
+      {/* Modal de vídeo/instruções */}
+      {selectedExerciseForVideo && (
+        <ExerciseVideoModal
+          exercise={selectedExerciseForVideo}
+          onOpenChange={setIsVideoModalOpen}
+          open={isVideoModalOpen}
+        />
+      )}
     </div>
   );
 };
