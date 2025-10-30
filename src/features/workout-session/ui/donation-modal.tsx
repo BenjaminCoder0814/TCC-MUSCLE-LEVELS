@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Heart, X, Code, Server, Coffee,  } from "lucide-react";
+import { Heart, X, Code, Server, Coffee } from "lucide-react";
 
 import { useI18n } from "locales/client";
 import { Button } from "@/components/ui/button";
@@ -49,7 +49,7 @@ export function DonationModal({ isOpen, onClose }: DonationModalProps) {
   };
 
   return (
-    <dialog className="modal modal-bottom sm:modal-middle" ref={modalRef} style={{ padding: 0 }}>
+    <dialog className="modal modal-bottom sm:modal-middle" ref={modalRef} style={{ padding: 0 }} role="dialog">
       <div className="modal-box max-w-lg flex flex-col max-h-[90vh]">
         {/* Header */}
         <div className="flex items-center justify-between mb-4 flex-shrink-0">
@@ -140,8 +140,8 @@ export function DonationModal({ isOpen, onClose }: DonationModalProps) {
                 onClick={handleDonate}
                 size="large"
               >
-                < className="h-4 w-4 mr-2" />
-                 Sponsors
+                <Heart className="h-4 w-4 mr-2" />
+                Apoiar Projeto
               </Button>
             </div>
             <Button className="w-full" onClick={onClose} size="small" variant="outline">

@@ -3,8 +3,6 @@ import { readFile } from "fs/promises";
 
 import { compileMDX } from "next-mdx-remote/rsc";
 
-import { WorkoutLol } from "@/components/ui/Muscle Levels";
-
 export async function getLocalizedMdx(
   pageSlug: string, // ex: "privacy-policy"
   locale: string, // ex: "fr" or "en"
@@ -19,7 +17,7 @@ export async function getLocalizedMdx(
       parseFrontmatter: true,
     },
     components: {
-      WorkoutLol,
+      // Componentes para MDX podem ser adicionados aqui
     },
   });
 
