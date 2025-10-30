@@ -11,14 +11,14 @@ const booleanString = z.enum(["true", "false"]).transform((val) => val === "true
 export const env = createEnv({
   server: {
     BETTER_AUTH_URL: z.string().url(),
-    DATABASE_URL: z.string().url().optional(),
-    GOOGLE_CLIENT_ID: z.string().min(1).optional(),
-    GOOGLE_CLIENT_SECRET: z.string().min(1).optional(),
+    DATABASE_URL: z.string().optional(),
+    GOOGLE_CLIENT_ID: z.string().optional(),
+    GOOGLE_CLIENT_SECRET: z.string().optional(),
     NODE_ENV: z.enum(["development", "production", "test"]),
     BETTER_AUTH_SECRET: z.string().min(1),
     OPENPANEL_SECRET_KEY: z.string().optional(),
     SMTP_HOST: z.string().optional(),
-    SMTP_PORT: z.coerce.number().positive().optional().default(587),
+    SMTP_PORT: z.coerce.number().optional().default(587),
     SMTP_USER: z.string().optional(),
     SMTP_PASS: z.string().optional(),
     SMTP_FROM: z.string().optional(),
