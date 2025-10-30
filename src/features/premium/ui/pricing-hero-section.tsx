@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Sparkles, Heart, , Users, TrendingUp, Zap } from "lucide-react";
+import { Sparkles, Heart, Users, TrendingUp, Zap } from "lucide-react";
 
 import { useI18n } from "locales/client";
 
@@ -15,7 +15,7 @@ export function PricingHeroSection() {
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00D4AA]/10 dark:bg-[#00D4AA]/20 rounded-full">
-            < className="w-4 h-4 text-[#00D4AA]" />
+            <Sparkles className="w-4 h-4 text-[#00D4AA]" />
             <span className="text-sm font-medium text-[#00D4AA]">{t("premium.hero.badge")}</span>
           </div>
 
