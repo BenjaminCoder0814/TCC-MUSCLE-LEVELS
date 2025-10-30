@@ -33,12 +33,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Otimizações para Vercel
+  // Configuração para Vercel
   experimental: {
     serverComponentsExternalPackages: ['@prisma/client', 'prisma'],
   },
-  // Configuração de output para melhor performance
-  output: 'standalone',
 };
 
 export default nextConfig;
