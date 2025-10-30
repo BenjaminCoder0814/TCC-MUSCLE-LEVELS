@@ -10,7 +10,14 @@ const nextConfig: NextConfig = {
   },
   images: {
     unoptimized: true,
-    domains: ["lh3.googleusercontent.com", "192.168.1.12", "localhost", "www.facebook.com", "api.dicebear.com"],
+    domains: [
+      "lh3.googleusercontent.com", 
+      "192.168.1.12", 
+      "localhost", 
+      "www.facebook.com", 
+      "api.dicebear.com",
+      "tcc-muscle-levels.vercel.app"
+    ],
     remotePatterns: [
       {
         protocol: "https",
@@ -20,8 +27,18 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "api.dicebear.com",
       },
+      {
+        protocol: "https",
+        hostname: "tcc-muscle-levels.vercel.app",
+      },
     ],
   },
+  // Otimizações para Vercel
+  experimental: {
+    serverComponentsExternalPackages: ['@prisma/client', 'prisma'],
+  },
+  // Configuração de output para melhor performance
+  output: 'standalone',
 };
 
 export default nextConfig;
