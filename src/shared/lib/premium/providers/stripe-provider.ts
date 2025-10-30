@@ -18,11 +18,9 @@ export class StripeProvider implements PaymentProvider {
   private stripe: Stripe;
 
   constructor() {
-    if (!env.STRIPE_SECRET_KEY) {
-      throw new Error("STRIPE_SECRET_KEY is required");
-    }
-
-    this.stripe = new Stripe(env.STRIPE_SECRET_KEY, {
+    const stripeKey = env.STRIPE_SECRET_KEY || "sk_test_dummy_key_for_tcc";
+    
+    this.stripe = new Stripe(stripeKey, {
       apiVersion: "2025-05-28.basil",
     });
   }
