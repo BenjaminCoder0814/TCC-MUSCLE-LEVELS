@@ -1,4 +1,4 @@
-# Workout.cool Premium Pricing Components 💪
+# Muscle Levels Premium Pricing Components 💪
 
 This directory contains the complete pricing page implementation following the fitness-focused conversion strategy outlined in the
 development prompt.
@@ -39,7 +39,7 @@ src/features/premium/ui/
 ### 1. FREE (CORE) - €0/forever
 
 - **Badge**: "Open-Source • Always Free"
-- **Icon**: Github
+- **Icon**: 
 - **Color**: Green (`#22C55E`)
 - **Value Prop**: All essential training functions
 - **CTA**: "Start Training Free"
@@ -74,7 +74,7 @@ src/features/premium/ui/
 
 ### 2. Open-Source Trust
 
-- GitHub integration prominent
+-  integration prominent
 - Self-hosting always mentioned
 - Code transparency emphasized
 - No vendor lock-in guarantees

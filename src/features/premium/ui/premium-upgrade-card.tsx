@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { Crown, Zap, Heart, Check, ArrowRight, LogIn, Github, Users, RefreshCw, Lock, ShieldCheck, GiftIcon } from "lucide-react";
+import { Crown, Zap, Heart, Check, ArrowRight, LogIn, , Users, RefreshCw, Lock, ShieldCheck, GiftIcon } from "lucide-react";
 import { useMutation } from "@tanstack/react-query";
 
 import { useI18n, useCurrentLocale } from "locales/client";
@@ -228,7 +228,7 @@ export function PremiumUpgradeCard() {
 
               <div className="text-center space-y-6 mb-8 mt-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#22C55E] to-[#16A34A] rounded-2xl flex items-center justify-center mx-auto">
-                  <Github className="w-8 h-8 text-white" strokeWidth={2.5} />
+                  < className="w-8 h-8 text-white" strokeWidth={2.5} />
                 </div>
 
                 <div>
@@ -433,7 +433,7 @@ export function PremiumUpgradeCard() {
 
               <div className="text-center space-y-2">
                 <div className="w-12 h-12 bg-[#FF6B35]/10 rounded-xl flex items-center justify-center mx-auto">
-                  <Github className="w-6 h-6 text-[#FF6B35]" />
+                  < className="w-6 h-6 text-[#FF6B35]" />
                 </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">{t("premium.final_cta.values.1.title")}</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">{t("premium.final_cta.values.1.description")}</p>

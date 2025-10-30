@@ -3,7 +3,7 @@ import { readFile } from "fs/promises";
 
 import { compileMDX } from "next-mdx-remote/rsc";
 
-import { WorkoutLol } from "@/components/ui/workout-lol";
+import { WorkoutLol } from "@/components/ui/Muscle Levels";
 
 export async function getLocalizedMdx(
   pageSlug: string, // ex: "privacy-policy"

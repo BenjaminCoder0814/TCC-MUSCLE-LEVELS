@@ -1,85 +1,288 @@
 # 💪 Muscle Levels
 
-Plataforma completa de performance e triagem fitness feita com Next.js, React e Tailwind CSS.
+> **Uma plataforma moderna de fitness desenvolvida especialmente para acompanhamento de treinos e evolução muscular**
 
-[![Deploy](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://muscle-levels.vercel.app)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/BenjaminCoder0814/Muscle-Levels)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![Next.js](https://img.shields.io/badge/Next.js-15.2.3-000000?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Prisma](https://img.shields.io/badge/Prisma-6.18.0-2D3748?style=for-the-badge&logo=prisma)](https://prisma.io/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker)](https://www.docker.com/)
 
-**🚀 Deploy Ativo**: [https://muscle-levels.vercel.app](https://muscle-levels.vercel.app)  
-**📦 Repositório**: [https://github.com/BenjaminCoder0814/Muscle-Levels](https://github.com/BenjaminCoder0814/Muscle-Levels)
+## 🎯 Sobre o Projeto
 
----
+Muscle Levels é uma aplicação completa de acompanhamento de treinos, desenvolvida com tecnologias modernas para ajudar usuários a alcançarem seus objetivos fitness através de monitoramento detalhado de exercícios, progressão de cargas e análise de desempenho.
 
-## 🌐 Visão Geral
+### A História do Muscle Levels
 
-O **Muscle Levels** é um ecossistema fitness digital que conecta treino, nutrição e gamificação em um só lugar. Nossa plataforma oferece:
+🏗️ **Desenvolvimento Próprio**: Criado inteiramente do zero como projeto acadêmico  
+� **Inovação**: Implementação de funcionalidades avançadas de tracking e analytics  
+🎓 **Finalidade Acadêmica**: Desenvolvido como Trabalho de Conclusão de Curso (TCC)  
+� **Foco em Dados**: Sistema robusto de análise de progressão e métricas de performance  
+� **Tecnologia Moderna**: Utilização das mais recentes tecnologias web para performance otimizada  
 
-- 🔍 **Autoanálise corporal** - Sistema completo de avaliação física
-- 🏋️ **Treinos personalizados** - Exercícios adaptados ao seu nível
-- 📊 **Monitoramento de progresso** - Acompanhe sua evolução
-- 🎮 **Gamificação** - Sistema de pontos e conquistas
-- 🏆 **Ranking** - Compare seu desempenho
-- 💪 **Comunidade** - Conecte-se com outros atletas
+### Por que o Muscle Levels Existe
 
----
+**Necessidade de uma solução completa.**
 
----
+O mercado precisava de uma plataforma que combinasse simplicidade de uso com análise profunda de dados.
 
-## ⚡ Instalação e Execução
+**Foco na experiência do usuário.**
 
-- **Next.js 15** com App Router e Turbopack
-- **React 19** com Server Components  
-- **TypeScript** para tipagem estática
-- **Tailwind CSS + DaisyUI** para estilização
-- **Prisma + PostgreSQL** para banco de dados
-- **Better Auth** para autenticação segura
-- **Vercel** para deploy e hosting
+Muscle Levels foi criado pensando na necessidade real dos praticantes de musculação de ter uma ferramenta completa, confiável e moderna para acompanhar sua evolução nos treinos.
 
----
+## 🎯 Funcionalidades Principais
 
-## 📱 Funcionalidades Principais
+### 💪 Sistema de Treinos
+- **181+ exercícios** catalogados com informações detalhadas
+- **Construtor de treinos** intuitivo e personalizável  
+- **Timer integrado** com períodos de descanso configuráveis
+- **Progressão automática** de cargas baseada no desempenho
+- **Histórico completo** de todas as sessões de treino
 
-- **🎯 Criador de Treinos** - Seleção por músculos e equipamentos
-- **📊 Estatísticas** - Gráficos de volume e progressão  
-- **🔐 Autenticação** - Login seguro com Google OAuth
-- **🌍 Multilíngue** - Suporte a 6 idiomas (PT, EN, ES, FR, RU, ZH-CN)
-- **🏆 Ranking Global** - Sistema de pontos e leaderboard
-- **🎮 Gamificação** - Conquistas, badges e níveis
-- **📱 PWA** - Instalável em dispositivos mobile
-- **🌙 Dark Mode** - Tema claro e escuro
+### 📊 Analytics Avançados
+- **Gráfico de atividades** estilo  mostrando consistência
+- **Métricas de volume** semanal e mensal de treinamento
+- **Recordes pessoais** com detecção automática de PRs
+- **Análise de progresso** com tendências e estatísticas
+- **Composição corporal** para acompanhamento completo
+## 🚀 Quick Start
 
-### Pré-requisitos
+### Prerequisites
 
-- Node.js 18+
-- pnpm ou npm
-- PostgreSQL
+- **Node.js** (v18+)
+- **pnpm** (v8+)
+- **Docker**
 
-### Setup
+### Installation
+
+1. **Clone o repositório**
 
 ```bash
-# Clone o repositório
-git clone https://github.com/BenjaminCoder0814/Muscle-Levels.git
-
-# Entre no diretório
+git clone https://.com/BenjaminCoder0814/Muscle-Levels.git
 cd Muscle-Levels
+```
 
-# Instale as dependências
+2. **Choose your installation method:**
+
+#### 🐳 With Docker
+
+```bash
+# Start the database
+docker compose up -d
+
+# Install dependencies
 pnpm install
 
-# Configure as variáveis de ambiente
-cp .env.example .env.local
+# Set up environment
+cp .env.example .env
 
-# Execute as migrações do banco
-pnpm prisma migrate dev
+# Run database migrations
+pnpm run db:migrate
 
-# Inicie o servidor de desenvolvimento
+# Seed the database
+pnpm run db:seed
+
+# Start the development server
 pnpm dev
 ```
 
-Acesse: [http://localhost:3000](http://localhost:3000)
+#### � Without Docker
 
----
+```bash
+# Install dependencies
+pnpm install
+
+# Set up your database connection in .env
+# DATABASE_URL="postgresql://username:password@localhost:5432/muscle_levels"
+
+# Run database migrations
+pnpm run db:migrate
+
+# Seed the database with sample data
+pnpm run db:seed
+
+# Start the development server
+pnpm dev
+```
+
+## 🏋️ Exercise Database Import
+
+The project includes a comprehensive exercise database. To import a sample of exercises:
+
+### Prerequisites for Import
+
+**Prepare your CSV file**
+
+Your CSV should have these columns:
+
+```csv
+id,name,name_en,description,description_en,full_video_url,full_video_image_url,introduction,introduction_en,slug,slug_en,attribute_name,attribute_value
+```
+
+You can use the provided example.
+
+### Import Commands
+
+```bash
+# Import exercises from a CSV file
+pnpm run import:exercises-full /path/to/your/exercises.csv
+
+# Example with the provided sample data
+pnpm run import:exercises-full ./data/sample-exercises.csv
+
+# Quick seed with included sample data
+pnpm run db:seed
+```
+
+### CSV Format Example
+
+```csv
+id,name,name_en,description,description_en,full_video_url,full_video_image_url,introduction,introduction_en,slug,slug_en,attribute_name,attribute_value
+157,"Fentes arrières à la barre","Barbell Reverse Lunges","<p>Stand upright...</p>","<p>Stand upright...</p>",https://youtube.com/...,https://img.youtube.com/...,slug-fr,slug-en,TYPE,STRENGTH
+157,"Fentes arrières à la barre","Barbell Reverse Lunges","<p>Stand upright...</p>","<p>Stand upright...</p>",https://youtube.com/...,https://img.youtube.com/...,slug-fr,slug-en,PRIMARY_MUSCLE,QUADRICEPS
+```
+
+**Want unlimited exercises for local development?**
+
+Just ask ChatGPT with the prompt from `./scripts/import-exercises-with-attributes.prompt.md`
+
+## 🏗️ Project Architecture
+
+This project follows **Feature-Sliced Design (FSD)** principles with **Next.js App Router**:
+
+```
+src/
+├── app/            # Next.js pages, routes and layouts
+├── processes/      # Business flows (multi-feature)
+├── widgets/        # Composable UI with logic (Sidebar, Header)
+├── features/       # Business units (auth, exercise-management)
+├── entities/       # Domain entities (user, exercise, workout)
+├── shared/         # Shared code (UI, lib, config, types)
+└── styles/         # Global CSS, themes
+```
+
+### Architecture Principles
+
+- **Feature-driven**: Each feature is independent and reusable
+- **Clear domain isolation**: shared → entities → features → widgets → app
+- **Consistency**: Between business logic, UI, and data layers
+
+### Example Feature Structure
+
+```
+features/
+└── exercise-management/
+    ├── ui/         # UI components (ExerciseForm, ExerciseCard)
+    ├── model/      # Hooks, state management (useExercises)
+    ├── lib/        # Utilities (exercise-helpers)
+    └── api/        # Server actions or API calls
+```
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Development Workflow
+
+1. **Create an issue** for the feature/bug you want to work on. Say that you will work on it (or no)
+2. **Fork the repository**
+3. **Create your feature branch** (`git checkout -b feature/amazing-feature`)
+4. **Make your changes** following our code standards
+5. **Commit your changes** (`git commit -m 'feat: add amazing feature'`)
+6. **Push to the branch** (`git push origin feature/amazing-feature`)
+7. **Open a Pull Request** (one issue = one PR)
+
+📋 For complete contribution guidelines, see our [Contributing Guide](CONTRIBUTING.md)
+
+### Code Style
+
+- Follow **TypeScript** best practices
+- Use **Feature-Sliced Design** architecture
+- Write **meaningful commit messages**
+
+- �️ **Exercise Management**: Comprehensive exercise database with categories
+- ⏱️ **Workout Timer**: Built-in timer for workout sessions
+- 📊 **Progress Tracking**: Track your fitness journey
+- 🏆 **Leaderboards**: Compete with the community
+- � **Workout Builder**: Create custom workout routines
+- 📱 **Responsive Design**: Mobile-first approach
+- 🌍 **Internationalization**: Multi-language support
+- 🔐 **Authentication**: Secure user management
+- 💾 **Offline Support**: PWA capabilities
+
+## 🚀 Deployment / Self-hosting
+
+📖 For detailed self-hosting instructions, see our [Complete Self-hosting Guide](docs/SELF-HOSTING.md)
+
+To seed the database with the sample exercises, set the `SEED_SAMPLE_DATA` env variable to `true`.
+
+### Using Docker
+
+```bash
+# Build the Docker image
+docker build -t yourusername/muscle-levels .
+
+# Run the container
+docker run -p 3000:3000 --env-file .env.production yourusername/muscle-levels
+```
+
+### Using Docker Compose
+
+**DATABASE_URL**  
+Update the host to point to the postgres service instead of localhost:  
+`DATABASE_URL=postgresql://username:password@postgres:5432/muscle_levels`
+
+```bash
+docker compose up -d
+```
+
+### Manual Deployment
+
+```bash
+# Build the application
+pnpm build
+
+# Run database migrations
+export DATABASE_URL="your-production-db-url"
+npx prisma migrate deploy
+
+# Start the production server
+pnpm start
+```
+
+## 📋 Available Scripts
+
+```bash
+pnpm dev                    # Start development server
+pnpm build                  # Build for production
+pnpm start                  # Start production server
+pnpm lint                   # Run ESLint
+pnpm lint:fix              # Fix ESLint issues
+
+# Database
+pnpm db:seed               # Seed with sample data
+pnpm db:migrate            # Run database migrations
+pnpm db:studio             # Open Prisma Studio
+
+# Exercise Import
+pnpm import:exercises-full # Import exercises from CSV
+pnpm import:hundreds       # Import hundreds of exercises
+
+# Development Tools
+pnpm email                 # Start email development
+pnpm stripe-webhooks       # Listen for Stripe webhooks
+```
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 15.2.3 (App Router), React, TypeScript
+- **Backend**: Next.js API Routes, Prisma ORM
+- **Database**: PostgreSQL
+- **Authentication**: Better Auth
+- **Styling**: Tailwind CSS, Radix UI
+- **State Management**: TanStack Query
+- **Forms**: React Hook Form + Zod
+- **Email**: React Email
+- **Deployment**: Docker, Vercel-ready
 
 ## � Comandos Úteis
 
@@ -110,78 +313,22 @@ GOOGLE_CLIENT_SECRET="your-google-client-secret"
 NEXT_PUBLIC_APP_URL="http://localhost:3000"
 ```
 
----
+## � License
 
-## 📚 Documentação Adicional
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-- **[FINAL_REPORT.md](FINAL_REPORT.md)** - Relatório completo do TCC
-- **[README_TCC.md](README_TCC.md)** - Instruções específicas para avaliação
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Guia de contribuição
-- **[docs/DATABASE-SETUP.md](docs/DATABASE-SETUP.md)** - Setup do banco de dados
-- **[docs/SELF-HOSTING.md](docs/SELF-HOSTING.md)** - Guia de self-hosting
+## � Support the Project
 
----
+If **Muscle Levels** has helped you in your fitness journey, consider:
 
-## 👥 Equipe de Desenvolvimento
-
-Este projeto foi desenvolvido como Trabalho de Conclusão de Curso (TCC) por:
-
-- **Julio Torresani** - Backend, Autenticação, Deploy
-- **Benjamin Maciel** - Frontend, UI/UX, Internacionalização
-- **Emanuel Marson** - Analytics, Gamificação, Performance
+- ⭐ **Starring** the repository
+- � **Reporting** bugs and issues
+- 💡 **Suggesting** new features
+- 🤝 **Contributing** to the codebase
+- 📢 **Sharing** with the community
 
 ---
 
-## 🤝 Como Contribuir
+**Made with ❤️ for the fitness community**
 
-Contribuições são bem-vindas! Por favor, leia o [CONTRIBUTING.md](CONTRIBUTING.md) para detalhes sobre nosso código de conduta e processo de pull requests.
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-## 📞 Contato e Suporte
-
-- **Issues**: [GitHub Issues](https://github.com/BenjaminCoder0814/Muscle-Levels/issues)
-- **Discussões**: [GitHub Discussions](https://github.com/BenjaminCoder0814/Muscle-Levels/discussions)
-- **Email**: support@musclelevels.com
-
----
-
-## 🌟 Agradecimentos
-
-- [workout.cool](https://workout.cool) - Projeto open-source que serviu de inspiração
-- E-Class e Coordenação Pedagógica - Pelo suporte durante o desenvolvimento
-- Comunidade Next.js e React - Pela documentação e recursos excelentes
-
----
-
-##  Autor
-
-**Benjamin Maciel**
-
-- GitHub: [@BenjaminCoder0814](https://github.com/BenjaminCoder0814)
-- Email: support@musclelevels.com
-
----
-
-<div align="center">
-
-**💪 Transforme seu corpo com Muscle Levels!**
-
-[![Deploy](https://img.shields.io/badge/🚀-Acessar_Aplicação-blue?style=for-the-badge)](https://muscle-levels.vercel.app)
-[![Star](https://img.shields.io/github/stars/BenjaminCoder0814/Muscle-Levels?style=for-the-badge&logo=github)](https://github.com/BenjaminCoder0814/Muscle-Levels)
-
-**Desenvolvido com ❤️ por Julio Torresani, Benjamin Maciel e Emanuel Marson**
-
-</div>
+> _"From the community, for the community"_

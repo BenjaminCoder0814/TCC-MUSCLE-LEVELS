@@ -37,8 +37,8 @@ export async function generateMetadata({ params }: SessionDetailPageProps): Prom
     openGraph: {
       title: sessionMetadata.title,
       description: sessionMetadata.description,
-      url: `https://www.workout.cool/${locale}/programs/${slug}/session/${sessionSlug}`,
-      siteName: "Workout Cool",
+      url: `https://www.Muscle Levels/${locale}/programs/${slug}/session/${sessionSlug}`,
+      siteName: "Muscle Levels",
       images: [
         {
           url: imageUrl,
@@ -58,15 +58,15 @@ export async function generateMetadata({ params }: SessionDetailPageProps): Prom
       creator: "@WorkoutCool",
     },
     alternates: {
-      canonical: `https://www.workout.cool/${locale}/programs/${slug}/session/${sessionSlug}`,
+      canonical: `https://www.Muscle Levels/${locale}/programs/${slug}/session/${sessionSlug}`,
       languages: {
-        "fr-FR": `https://www.workout.cool/fr/programs/${slug}/session/${sessionSlug}`,
-        "en-US": `https://www.workout.cool/en/programs/${slug}/session/${sessionSlug}`,
-        "es-ES": `https://www.workout.cool/es/programs/${slug}/session/${sessionSlug}`,
-        "pt-PT": `https://www.workout.cool/pt/programs/${slug}/session/${sessionSlug}`,
-        "ru-RU": `https://www.workout.cool/ru/programs/${slug}/session/${sessionSlug}`,
-        "zh-CN": `https://www.workout.cool/zh-CN/programs/${slug}/session/${sessionSlug}`,
-        "x-default": `https://www.workout.cool/programs/${slug}/session/${sessionSlug}`,
+        "fr-FR": `https://www.Muscle Levels/fr/programs/${slug}/session/${sessionSlug}`,
+        "en-US": `https://www.Muscle Levels/en/programs/${slug}/session/${sessionSlug}`,
+        "es-ES": `https://www.Muscle Levels/es/programs/${slug}/session/${sessionSlug}`,
+        "pt-PT": `https://www.Muscle Levels/pt/programs/${slug}/session/${sessionSlug}`,
+        "ru-RU": `https://www.Muscle Levels/ru/programs/${slug}/session/${sessionSlug}`,
+        "zh-CN": `https://www.Muscle Levels/zh-CN/programs/${slug}/session/${sessionSlug}`,
+        "x-default": `https://www.Muscle Levels/programs/${slug}/session/${sessionSlug}`,
       },
     },
     robots: {
@@ -129,7 +129,7 @@ export default async function SessionDetailPage({ params }: SessionDetailPagePro
     locale,
     title: `${sessionTitle} - ${programTitle}`,
     description: response.session.description || `${sessionTitle} workout session`,
-    url: `https://www.workout.cool/${locale}/programs/${slug}/session/${sessionSlug}`,
+    url: `https://www.Muscle Levels/${locale}/programs/${slug}/session/${sessionSlug}`,
     image: response.session.exercises[0]?.exercise.fullVideoImageUrl || undefined,
     sessionData: {
       duration: Math.round(response.session.exercises.length * 3), // Estimate 3 min per exercise

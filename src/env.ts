@@ -22,7 +22,7 @@ export const env = createEnv({
     SMTP_USER: z.string().optional(),
     SMTP_PASS: z.string().optional(),
     SMTP_FROM: z.string().optional(),
-    //issue fixed in zod 4. See https://github.com/colinhacks/zod/issues/3906
+    //issue fixed in zod 4. See https://.com/colinhacks/zod/issues/3906
     SMTP_SECURE: booleanString.default("false"),
 
     STRIPE_SECRET_KEY: z.string().optional(),

@@ -31,7 +31,7 @@ interface WorkoutLolProps extends VariantProps<typeof workoutLolVariants> {
 }
 
 export const WorkoutLol = ({ className, variant, children }: WorkoutLolProps) => {
-  return <span className={cn(workoutLolVariants({ variant }), className)}>{children || "workout.lol"}</span>;
+  return <span className={cn(workoutLolVariants({ variant }), className)}>{children || "Muscle Levels"}</span>;
 };
 
 export const WorkoutLolMuted = ({ className, children }: Omit<WorkoutLolProps, "variant">) => (

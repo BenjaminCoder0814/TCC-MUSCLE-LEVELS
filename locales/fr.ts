@@ -16,7 +16,7 @@ export default {
     workouts_per_week: "entraînements/semaine",
     last_workout: "Dernier entraînement",
     page_title: "Classement des Champions",
-    page_subtitle: "Grimpez au sommet et devenez une légende Workout.cool",
+    page_subtitle: "Grimpez au sommet et devenez une légende Muscle Levels",
     period_all_time: "Global",
     period_monthly: "Mois",
     period_weekly: "Semaine",
@@ -117,7 +117,7 @@ export default {
     premium_required_title: "Premium Requis",
     premium_required_subtitle: "Ceci est un accès premium. Passez Premium pour accéder à tout le contenu premium.",
     premium_required_button: "Passer Premium",
-    already_premium: "Vous profitez de Workout.cool Premium",
+    already_premium: "Vous profitez de Muscle Levels Premium",
     no_ads: "Sans publicités",
     upgrade: "Passer Premium",
 
@@ -185,7 +185,7 @@ export default {
         description: "Toutes les fonctions essentielles pour s'entraîner",
         features: [
           "Génération d'exercices avec vidéos",
-          "Historique type GitHub de tes séances (6 mois)",
+          "Historique type  de tes séances (6 mois)",
           "Partage et reprise de séances (bientôt)",
           "Auto-hébergement possible",
           "Code source disponible",
@@ -287,7 +287,7 @@ export default {
     // FAQ
     faq: {
       title: "Questions fréquemment posées",
-      subtitle: "Tout ce que vous devez savoir sur Workout.cool et notre mission",
+      subtitle: "Tout ce que vous devez savoir sur Muscle Levels et notre mission",
       items: [
         {
           question: "Pourquoi payer si c'est open-source ?",
@@ -295,9 +295,9 @@ export default {
             "Excellente question ! Le code restera toujours gratuit, mais maintenir les serveurs, la base de données et l'infrastructure coûte de l'argent. Votre contribution nous aide à garder l'outil gratuit pour tous. C'est un modèle gagnant-gagnant : vous obtenez les fonctionnalités premium, la communauté garde l'accès gratuit !",
         },
         {
-          question: "Puis-je auto-héberger Workout.cool ?",
+          question: "Puis-je auto-héberger Muscle Levels ?",
           answer:
-            "Absolument ! Toute la base de code est disponible sur GitHub sous licence MIT. Vous pouvez la déployer sur vos propres serveurs, la personnaliser comme vous voulez et l'utiliser complètement gratuitement. L'auto-hébergement vous donne un contrôle total sur vos données et votre confidentialité d'entraînement.",
+            "Absolument ! Toute la base de code est disponible sur  sous licence MIT. Vous pouvez la déployer sur vos propres serveurs, la personnaliser comme vous voulez et l'utiliser complètement gratuitement. L'auto-hébergement vous donne un contrôle total sur vos données et votre confidentialité d'entraînement.",
         },
         {
           question: "Mes données d'entraînement sont-elles sécurisées ?",
@@ -317,7 +317,7 @@ export default {
         {
           question: "Comment fonctionne le suivi des progrès ?",
           answer:
-            "Chaque série, répétition, poids et temps est automatiquement enregistré. Vous obtenez un historique d'entraînement style GitHub montrant votre régularité, plus des analyses détaillées sur le volume, la progression et les records personnels. Les utilisateurs Premium obtiennent des graphiques et insights avancés.",
+            "Chaque série, répétition, poids et temps est automatiquement enregistré. Vous obtenez un historique d'entraînement style  montrant votre régularité, plus des analyses détaillées sur le volume, la progression et les records personnels. Les utilisateurs Premium obtiennent des graphiques et insights avancés.",
         },
         {
           question: "Puis-je importer des données d'autres apps ?",
@@ -342,9 +342,9 @@ export default {
       additional_support: {
         title: "Vous avez encore des questions ?",
         description: "Notre communauté axée fitness est là pour vous aider à réussir",
-        community: "Support communautaire (discord ou hello@workout.cool)",
-        discussions: "Discussions ouvertes (github/discord)",
-        roadmap: "Roadmap transparente (github)",
+        community: "Support communautaire (discord ou hello@Muscle Levels)",
+        discussions: "Discussions ouvertes (/discord)",
+        roadmap: "Roadmap transparente ()",
       },
     },
 
@@ -369,7 +369,7 @@ export default {
       ],
       quote: {
         text: "Nous croyons que les outils fitness doivent être accessibles à tous. Votre soutien nous aide à maintenir cette vision tout en continuant à innover.",
-        author: "— L'équipe Workout.cool",
+        author: "— L'équipe Muscle Levels",
       },
     },
 
@@ -384,10 +384,10 @@ export default {
     premium_active_subtitle: "Toutes les fonctionnalités débloquées",
     free_intro_title: "Tu as déjà beaucoup gratuitement...",
     free_intro_text:
-      "Workout.cool est une application de fitness gratuite et open-source utilisée quotidiennement par plus de 60 000 utilisateurs. Elle est construite avec amour (pas avec l'argent des VCs ^^) et nous coûte du temps et de l'argent réels pour la maintenir en ligne.",
+      "Muscle Levels est une application de fitness gratuite et open-source utilisée quotidiennement par plus de 60 000 utilisateurs. Elle est construite avec amour (pas avec l'argent des VCs ^^) et nous coûte du temps et de l'argent réels pour la maintenir en ligne.",
     donation_story_text:
       "Au début, nous fonctionnions grâce aux dons. Mais comme vous pouvez l'imaginer, les dons n'étaient pas suffisants pour couvrir les coûts de développement et de fonctionnement. Nous avons donc créé un package qui nous aidera à garder les lumières allumées et à débloquer quelques super-pouvoirs en cours de route.",
-    health_upgrade_text: "Si Workout.cool vous aide à améliorer votre santé, pensez à passer Premium :D !",
+    health_upgrade_text: "Si Muscle Levels vous aide à améliorer votre santé, pensez à passer Premium :D !",
     unlock_features_text: "Débloquez des fonctionnalités avancées et soutenez le fitness open-source.",
     invest_yourself_quote: "Ne lésinez jamais sur le fitness et les livres — investissez en vous-même !",
     support_mission: "Soutenir la mission",
@@ -408,7 +408,7 @@ export default {
     thank_supporting: "Merci de votre soutien.",
     no_pressure: "Aucune pression. Vous pouvez passer à Premium à tout moment.",
     keep_pushing: "continue à pousser ! huhu",
-    still_unsure: "Toujours pas sûr ? Pas de souci. Workout.cool restera toujours gratuit et open-source.",
+    still_unsure: "Toujours pas sûr ? Pas de souci. Muscle Levels restera toujours gratuit et open-source.",
     support_helps: "Mais si vous croyez en ce que nous construisons et que vous pouvez vous le permettre, votre soutien aidera 💚",
     self_hosting: "Auto-hébergement",
     community: "Communauté",
@@ -1440,7 +1440,7 @@ export default {
       note_2025_06_23: {
         title: "🇵🇹 Support Portugais & Bannière de Don",
         content:
-          "L'app supporte maintenant le <strong>portugais</strong> ! Nous avons aussi ajouté une <em>bannière de don</em> pour aider à supporter les coûts du projet via <a href='https://github.com/sponsors/snouzy' target='_blank' rel='noopener' class='text-blue-500 hover:underline'>GitHub Sponsors</a> ou <a href='https://ko-fi.com/workoutcool' target='_blank' rel='noopener' class='text-blue-500 hover:underline'>Ko-fi</a>.",
+          "L'app supporte maintenant le <strong>portugais</strong> ! Nous avons aussi ajouté une <em>bannière de don</em> pour aider à supporter les coûts du projet via <a href='https://.com/sponsors/' target='_blank' rel='noopener' class='text-blue-500 hover:underline'> Sponsors</a> ou <a href='https://nossa plataforma de apoio.com/workoutcool' target='_blank' rel='noopener' class='text-blue-500 hover:underline'>nossa plataforma de apoio</a>.",
       },
       note_2025_06_22: {
         title: "🌍 Nouvelles langues & amélioration des performances !",
@@ -1450,13 +1450,13 @@ export default {
       note_2025_06_19: {
         title: "📱 Maintenant disponible en PWA !",
         content:
-          "Workout.cool v1.2 est maintenant une Progressive Web App ! Installez-la sur votre téléphone pour une expérience d'application native avec accès hors ligne.",
+          "Muscle Levels v1.2 est maintenant une Progressive Web App ! Installez-la sur votre téléphone pour une expérience d'application native avec accès hors ligne.",
       },
       note_2025_06_18: {
         title:
           "🚀 Numéro #1 sur <a href='https://news.ycombinator.com/item?id=44309320' target='_blank' rel='noopener' class='text-blue-500 hover:underline'>Hacker News</a> !",
         content:
-          "Workout.cool a atteint le <strong>top spot</strong> sur Hacker News ! Merci à tous pour le support incroyable — bienvenue à tous les nouveaux utilisateurs ! 💪",
+          "Muscle Levels a atteint le <strong>top spot</strong> sur Hacker News ! Merci à tous pour le support incroyable — bienvenue à tous les nouveaux utilisateurs ! 💪",
       },
       note_2025_06_01: {
         title: "🎉 Nouveau : Dialogue des notes de version",
@@ -1471,7 +1471,7 @@ export default {
 
   // Premium Upsell Alert
   donation_alert: {
-    title: "Débloquez des fonctionnalités avancées avec Workout.cool Premium",
+    title: "Débloquez des fonctionnalités avancées avec Muscle Levels Premium",
     or: "ou",
   },
 

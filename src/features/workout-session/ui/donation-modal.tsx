@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Heart, X, Code, Server, Coffee, Github } from "lucide-react";
+import { Heart, X, Code, Server, Coffee,  } from "lucide-react";
 
 import { useI18n } from "locales/client";
 import { Button } from "@/components/ui/button";
@@ -39,12 +39,12 @@ export function DonationModal({ isOpen, onClose }: DonationModalProps) {
   }, [onClose]);
 
   const handleDonateKofi = () => {
-    window.open("https://ko-fi.com/workoutcool", "_blank");
+    window.open("https://nossa plataforma de apoio.com/workoutcool", "_blank");
     onClose();
   };
 
-  const handleDonateGitHub = () => {
-    window.open("https://github.com/sponsors/snouzy", "_blank");
+  const handleDonate = () => {
+    window.open("https://.com/sponsors/", "_blank");
     onClose();
   };
 
@@ -116,7 +116,7 @@ export function DonationModal({ isOpen, onClose }: DonationModalProps) {
           <iframe
             height="700"
             id="kofiframe"
-            src="https://ko-fi.com/workoutcool/?hidefeed=true&widget=true&embed=true&preview=true"
+            src="https://nossa plataforma de apoio.com/workoutcool/?hidefeed=true&widget=true&embed=true&preview=true"
             style={{ border: "none", width: "100%", padding: "4px" }}
             title="workoutcool"
           ></iframe>
@@ -133,15 +133,15 @@ export function DonationModal({ isOpen, onClose }: DonationModalProps) {
                 size="large"
               >
                 <Coffee className="h-4 w-4 mr-2" />
-                Ko-fi
+                nossa plataforma de apoio
               </Button>
               <Button
                 className="flex-1 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white border-0"
-                onClick={handleDonateGitHub}
+                onClick={handleDonate}
                 size="large"
               >
-                <Github className="h-4 w-4 mr-2" />
-                GitHub Sponsors
+                < className="h-4 w-4 mr-2" />
+                 Sponsors
               </Button>
             </div>
             <Button className="w-full" onClick={onClose} size="small" variant="outline">

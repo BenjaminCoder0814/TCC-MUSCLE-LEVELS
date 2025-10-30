@@ -10,7 +10,7 @@ echo "================================================="
 # Configurações
 OLD_DOMAIN_REGEX="workout\.cool"
 OLD_SIMPLE="workout"
-OLD_AUTHOR="Snouzy"
+OLD_AUTHOR=""
 NEW_SIMPLE="muscle-levels"
 NEW_AUTHOR="BenjaminCoder0814"
 NEW_PROJECT_NAME="Muscle Levels"
@@ -19,17 +19,17 @@ echo "1️⃣ BACKUP - Criando backup da branch atual..."
 git archive -o ../muscle-levels-backup-$(date +%Y%m%d-%H%M%S).zip HEAD || true
 
 echo "2️⃣ VERIFICAÇÃO - Listando arquivos que contêm referências antigas:"
-echo "   🔍 Domínio 'workout.cool':"
+echo "   🔍 Domínio 'Muscle Levels':"
 git grep -Il "$OLD_DOMAIN_REGEX" . || true
 echo "   🔍 Termo 'workout':"
 git grep -Il "$OLD_SIMPLE" . | head -10 || true
-echo "   🔍 Autor 'Snouzy':"
+echo "   🔍 Autor '':"
 git grep -Il "$OLD_AUTHOR" . || true
 
 echo "3️⃣ SUBSTITUIÇÃO - Executando substituições em massa..."
 
 # Substitui domínio primeiro (mais específico)
-echo "   📝 Substituindo domínio workout.cool -> muscle-levels..."
+echo "   📝 Substituindo domínio Muscle Levels -> muscle-levels..."
 if command -v sed >/dev/null 2>&1; then
     if [[ "$OSTYPE" == "darwin"* ]]; then
         # macOS
@@ -47,7 +47,7 @@ if command -v perl >/dev/null 2>&1; then
 fi
 
 # Substitui autor
-echo "   📝 Substituindo autor Snouzy -> BenjaminCoder0814..."
+echo "   📝 Substituindo autor  -> BenjaminCoder0814..."
 if command -v perl >/dev/null 2>&1; then
     grep -RIl "$OLD_AUTHOR" . | xargs -I {} perl -pi -e "s/$OLD_AUTHOR/$NEW_AUTHOR/g" {}
 fi
@@ -108,7 +108,7 @@ echo "   git add -A"
 echo "   git commit -m \"feat: complete rebranding to Muscle Levels\""
 echo ""
 echo "Para criar novo repositório:"
-echo "   git remote set-url origin https://github.com/BenjaminCoder0814/Muscle-Levels.git"
+echo "   git remote set-url origin https://.com/BenjaminCoder0814/Muscle-Levels.git"
 echo "   git push -u origin main --force"
 echo ""
 echo "Para apagar repositório antigo (CUIDADO!):"

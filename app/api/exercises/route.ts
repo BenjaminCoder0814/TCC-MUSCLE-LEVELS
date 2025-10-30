@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
     const params = {
       equipment: searchParams.get("equipment")?.split(",").filter(Boolean) || [],
       muscles: searchParams.get("muscles")?.split(",").filter(Boolean) || [],
-      limit: searchParams.get("limit") ? parseInt(searchParams.get("limit")!) : 3,
+      limit: searchParams.get("limit") ? parseInt(searchParams.get("limit")!) : 8,
     };
 
     const parsed = getExercisesSchema.safeParse(params);
@@ -34,4 +34,3 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "INTERNAL_SERVER_ERROR" }, { status: 500 });
   }
 }
-

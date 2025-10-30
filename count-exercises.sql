@@ -1,0 +1,1 @@
+SELECT COUNT(*) as total_exercises FROM exercises;

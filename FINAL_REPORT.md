@@ -14,7 +14,7 @@ RELATÓRIO FINAL — Muscle Levels (TCC)
 
 ## 1. RESUMO EXECUTIVO
 
-O **Muscle Levels** é uma plataforma web completa e moderna para criação, personalização e acompanhamento de treinos físicos, desenvolvida como Trabalho de Conclusão de Curso. Baseada no projeto open-source workout.cool, nossa solução oferece um ecossistema fitness digital que conecta treino, nutrição e gamificação em uma única plataforma integrada.
+O **Muscle Levels** é uma plataforma web completa e moderna para criação, personalização e acompanhamento de treinos físicos, desenvolvida como Trabalho de Conclusão de Curso. Baseada no projeto open-source Muscle Levels, nossa solução oferece um ecossistema fitness digital que conecta treino, nutrição e gamificação em uma única plataforma integrada.
 
 ### Principais Características:
 - 🔍 **Sistema de Autoanálise Corporal** - Avaliação física completa e personalizada
@@ -60,7 +60,7 @@ Nossa stack tecnológica foi cuidadosamente selecionada para garantir performanc
 
 ### Deployment & DevOps
 - **Vercel** - Plataforma de deploy com CI/CD integrado
-- **GitHub** - Controle de versão e colaboração
+- **** - Controle de versão e colaboração
 - **Docker** - Containerização para ambientes consistentes
 
 ---
@@ -302,7 +302,7 @@ Antes de começar, certifique-se de ter instalado:
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/BenjaminCoder0814/Muscle-Levels.git
+git clone https://.com/BenjaminCoder0814/Muscle-Levels.git
 cd Muscle-Levels
 
 # 2. Instale as dependências
@@ -378,9 +378,9 @@ npm run email            # Modo de desenvolvimento para emails
 
 #### Via Interface Web (Recomendado)
 
-1. Faça push do código para GitHub
+1. Faça push do código para 
 2. Acesse [vercel.com](https://vercel.com)
-3. Conecte sua conta GitHub
+3. Conecte sua conta 
 4. Importe o repositório `Muscle-Levels`
 5. Configure as variáveis de ambiente
 6. Clique em "Deploy"
@@ -449,7 +449,7 @@ muscle-levels/
 ### 8.1. Links do Projeto
 
 - **🚀 Deploy em Produção (Vercel)**: https://muscle-levels.vercel.app
-- **📦 Repositório GitHub**: https://github.com/BenjaminCoder0814/Muscle-Levels
+- **📦 Repositório **: https://.com/BenjaminCoder0814/Muscle-Levels
 - **📊 Apresentação do Projeto**: [Link para slides/vídeo se disponível]
 
 ### 8.2. Capturas de Tela
@@ -529,7 +529,7 @@ Durante o desenvolvimento, realizamos testes com usuários beta que destacaram:
 Gostaríamos de agradecer:
 
 - **E-Class e Coordenação Pedagógica**: Pela oportunidade de desenvolver este projeto e pelo suporte durante o curso.
-- **Comunidade Open Source**: Especialmente ao projeto workout.cool que serviu de inspiração e base.
+- **Comunidade Open Source**: Especialmente ao projeto Muscle Levels que serviu de inspiração e base.
 - **Família e Amigos**: Pelo apoio durante o desenvolvimento do TCC.
 - **Beta Testers**: Pelos feedbacks valiosos que ajudaram a melhorar o produto.
 
@@ -546,7 +546,7 @@ O desenvolvimento do **Muscle Levels** foi uma jornada de aprendizado intensa e 
 - ✅ Suporte a 6 idiomas diferentes
 - ✅ Design responsivo e acessível
 - ✅ Deploy em produção funcionando na Vercel
-- ✅ Código organizado e documentado no GitHub
+- ✅ Código organizado e documentado no 
 
 ### Impacto e Aprendizado:
 Este projeto nos permitiu aplicar na prática conceitos avançados de desenvolvimento web moderno, desde arquitetura de software até deploy em cloud. Mais importante, aprendemos a trabalhar em equipe, gerenciar tempo, resolver problemas complexos e entregar um produto de qualidade.
@@ -572,7 +572,7 @@ O Muscle Levels não termina aqui. Planejamos continuar desenvolvendo a platafor
 - [ExerciseDB](https://exercisedb.p.rapidapi.com/) - Base de dados de exercícios
 
 ### Inspiração
-- [workout.cool](https://workout.cool) - Projeto open-source base
+- [Muscle Levels](https://Muscle Levels) - Projeto open-source base
 - [Strong App](https://www.strong.app/) - Referência de UX
 - [MyFitnessPal](https://www.myfitnesspal.com/) - Referência de tracking
 
@@ -582,7 +582,7 @@ O Muscle Levels não termina aqui. Planejamos continuar desenvolvendo a platafor
 
 ### Anexo A - Links Importantes
 - **Deploy**: https://muscle-levels.vercel.app
-- **GitHub**: https://github.com/BenjaminCoder0814/Muscle-Levels
+- ****: https://.com/BenjaminCoder0814/Muscle-Levels
 - **Documentação Técnica**: README.md no repositório
 
 ### Anexo B - Arquivos Complementares

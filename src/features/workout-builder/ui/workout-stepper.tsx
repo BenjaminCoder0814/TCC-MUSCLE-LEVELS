@@ -11,6 +11,7 @@ import Trophy from "@public/images/trophy.png";
 import useBoolean from "@/shared/hooks/useBoolean";
 import { WorkoutSessionSets } from "@/features/workout-session/ui/workout-session-sets";
 import { WorkoutSessionHeader } from "@/features/workout-session/ui/workout-session-header";
+import { WorkoutSessionTimer } from "@/features/workout-session/ui/workout-session-timer";
 import { DonationModal } from "@/features/workout-session/ui/donation-modal";
 import { useDonationModal } from "@/features/workout-session/hooks/use-donation-modal";
 import { WorkoutBuilderFooter } from "@/features/workout-builder/ui/workout-stepper-footer";
@@ -200,12 +201,13 @@ export function WorkoutStepper() {
 
   if (isWorkoutActive && session) {
     return (
-      <div className="w-full max-w-6xl mx-auto">
+      <div className="w-full max-w-6xl mx-auto relative">
         {env.NEXT_PUBLIC_TOP_WORKOUT_SESSION_BANNER_AD_SLOT && (
           <HorizontalTopBanner adSlot={env.NEXT_PUBLIC_TOP_WORKOUT_SESSION_BANNER_AD_SLOT} />
         )}
         {!showCongrats && <WorkoutSessionHeader onQuitWorkout={quitWorkout} />}
         <WorkoutSessionSets isWorkoutActive={isWorkoutActive} onCongrats={handleCongrats} showCongrats={showCongrats} />
+        <WorkoutSessionTimer />
       </div>
     );
   }

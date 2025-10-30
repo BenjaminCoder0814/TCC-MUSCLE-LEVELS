@@ -25,18 +25,18 @@ export const DonationAlert = ({ className }: DonationAlertProps) => {
           {t("donation_alert.title")}{" "}
           <Link
             className="font-medium text-gray-900 underline hover:text-gray-700 dark:text-gray-200"
-            href="https://ko-fi.com/workoutcool"
+            href="https://nossa plataforma de apoio.com/workoutcool"
             target="_blank"
           >
-            Ko-fi
+            nossa plataforma de apoio
           </Link>{" "}
           or{" "}
           <Link
             className="font-medium text-gray-900 underline hover:text-gray-700 dark:text-gray-200"
-            href="https://github.com/sponsors/snouzy"
+            href="https://.com/sponsors/"
             target="_blank"
           >
-            GitHub Sponsors
+             Sponsors
           </Link>
           .
         </span>

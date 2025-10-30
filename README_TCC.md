@@ -1,6 +1,6 @@
 Muscle Levels — TCC Submission README
 
-Projeto: Muscle Levels (fork / rebrand do workout.cool)
+Projeto: Muscle Levels (fork / rebrand do Muscle Levels)
 
 Descrição curta
 ----------------
@@ -9,7 +9,7 @@ Plataforma web para criação e acompanhamento de treinos. Implementada com Next
 Links (preencher após deploy/push)
 ----------------------------------
 - Deploy (Vercel): https://<SEU_DEPLOY>.vercel.app
-- Repositório GitHub: https://github.com/<SEU_USUARIO>/<SEU_REPO>
+- Repositório : https://.com/<SEU_USUARIO>/<SEU_REPO>
 
 Como rodar localmente (Windows)
 -------------------------------
@@ -38,8 +38,8 @@ Start (após build):
 
 Deploy no Vercel (web UI)
 -------------------------
-1. Crie um repositório no GitHub e faça push do código (ver comandos abaixo).
-2. Acesse https://vercel.com, conecte sua conta GitHub e importe o repositório.
+1. Crie um repositório no  e faça push do código (ver comandos abaixo).
+2. Acesse https://vercel.com, conecte sua conta  e importe o repositório.
 3. Selecione o framework (Next.js) e finalize.
 4. Configure variáveis de ambiente em Settings -> Environment Variables (use as do arquivo `.env.local`).
 
@@ -64,13 +64,13 @@ Como criar o repositório e subir (Windows cmd)
    git add .
    git commit -m "Initial commit - Muscle Levels TCC"
 
-2. Criar repositório no GitHub (web) e copiar URL do remote, ou usar GitHub CLI (gh):
+2. Criar repositório no  (web) e copiar URL do remote, ou usar  CLI (gh):
 
    gh repo create <seu_usuario>/<seu_repo> --public --source=. --push
 
 3. Ou manualmente (com URL):
 
-   git remote add origin https://github.com/<SEU_USUARIO>/<SEU_REPO>.git
+   git remote add origin https://.com/<SEU_USUARIO>/<SEU_REPO>.git
    git branch -M main
    git push -u origin main
 
@@ -87,4 +87,4 @@ Contribuidores (grupo)
 Notas finais
 -----------
 - Depois de subir o repositório e fazer deploy, substitua as placeholders acima com os links finais.
-- Se quiser, eu posso ajudar a executar os passos de push e deploy aqui se você me autorizar ou fornecer acesso (recomendo usar GitHub + Vercel web UI para maior segurança).
+- Se quiser, eu posso ajudar a executar os passos de push e deploy aqui se você me autorizar ou fornecer acesso (recomendo usar  + Vercel web UI para maior segurança).

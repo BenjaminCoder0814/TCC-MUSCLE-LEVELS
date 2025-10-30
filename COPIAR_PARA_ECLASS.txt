@@ -14,11 +14,11 @@
 🚀 DEPLOY (VERCEL):
 https://muscle-levels.vercel.app
 
-📦 REPOSITÓRIO GITHUB:
-https://github.com/BenjaminCoder0814/Muscle-Levels
+📦 REPOSITÓRIO :
+https://.com/BenjaminCoder0814/Muscle-Levels
 
 📄 RELATÓRIO FINAL COMPLETO:
-https://github.com/BenjaminCoder0814/Muscle-Levels/blob/main/FINAL_REPORT.md
+https://.com/BenjaminCoder0814/Muscle-Levels/blob/main/FINAL_REPORT.md
 
 ════════════════════════════════════════════════════════════════════════
 
@@ -105,7 +105,7 @@ OPÇÃO 3: Credenciais demo (se necessário)
 📝 OBSERVAÇÕES:
 
 ✓ Deploy ativo 24/7 no Vercel
-✓ Código aberto no GitHub
+✓ Código aberto no 
 ✓ Totalmente funcional
 ✓ Testado em múltiplos dispositivos
 ✓ Documentação completa

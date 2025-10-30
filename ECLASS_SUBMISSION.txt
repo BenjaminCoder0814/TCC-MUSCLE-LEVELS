@@ -23,11 +23,11 @@ Instituição: E-Class
 🚀 DEPLOY EM PRODUÇÃO (VERCEL):
 https://muscle-levels.vercel.app
 
-📦 REPOSITÓRIO GITHUB:
-https://github.com/BenjaminCoder0814/Muscle-Levels
+📦 REPOSITÓRIO :
+https://.com/BenjaminCoder0814/Muscle-Levels
 
 📄 DOCUMENTAÇÃO COMPLETA:
-https://github.com/BenjaminCoder0814/Muscle-Levels/blob/main/README.md
+https://.com/BenjaminCoder0814/Muscle-Levels/blob/main/README.md
 
 ---
 
@@ -72,7 +72,7 @@ BACKEND:
 
 INFRAESTRUTURA:
 - Vercel (Deploy + CI/CD)
-- GitHub (Controle de versão)
+-  (Controle de versão)
 - Docker (opcional)
 
 ---
@@ -107,7 +107,7 @@ INFRAESTRUTURA:
 ---
 
 # 1. Clonar o repositório
-git clone https://github.com/BenjaminCoder0814/Muscle-Levels.git
+git clone https://.com/BenjaminCoder0814/Muscle-Levels.git
 cd Muscle-Levels
 
 # 2. Instalar dependências
@@ -170,7 +170,7 @@ Componentes React: 150+
 Exercícios Catalogados: 200+
 Idiomas Suportados: 6
 Tempo de Desenvolvimento: 3 meses
-Commits no GitHub: 200+
+Commits no : 200+
 
 LIGHTHOUSE SCORES:
 - Performance: 90+
@@ -192,7 +192,7 @@ profundos em:
 ✓ Autenticação e autorização segura
 ✓ Deploy e CI/CD com Vercel
 ✓ Trabalho em equipe e metodologias ágeis
-✓ Versionamento de código com Git/GitHub
+✓ Versionamento de código com Git/
 ✓ Design responsivo e acessível
 ✓ Performance e otimização web
 ✓ Internacionalização de aplicações
@@ -254,8 +254,8 @@ Julio Torresani: julio.torresani@email.com
 Benjamin Maciel: benjamin.maciel@email.com
 Emanuel Marson: emanuel.marson@email.com
 
-GitHub do Projeto: https://github.com/BenjaminCoder0814/Muscle-Levels
-Issues/Suporte: https://github.com/BenjaminCoder0814/Muscle-Levels/issues
+ do Projeto: https://.com/BenjaminCoder0814/Muscle-Levels
+Issues/Suporte: https://.com/BenjaminCoder0814/Muscle-Levels/issues
 
 ---
 
@@ -281,7 +281,7 @@ Faça login com Google OAuth para experiência completa.
 1. DEPLOY ATIVO: O projeto está hospedado no Vercel e pode ser acessado 
    24/7 através do link fornecido.
 
-2. CÓDIGO FONTE: Todo o código está disponível publicamente no GitHub com
+2. CÓDIGO FONTE: Todo o código está disponível publicamente no  com
    histórico completo de commits e documentação.
 
 3. FUNCIONAMENTO: A aplicação está 100% funcional com todas as features
@@ -310,7 +310,7 @@ representa não apenas a conclusão de um curso, mas o início de uma jornada
 no desenvolvimento de software profissional.
 
 Agradecemos também à comunidade open-source, especialmente ao projeto 
-workout.cool que serviu de inspiração, e a todos que contribuíram com
+Muscle Levels que serviu de inspiração, e a todos que contribuíram com
 feedback durante o desenvolvimento.
 
 ---
@@ -320,7 +320,7 @@ feedback durante o desenvolvimento.
 
 ☑ Nome de todos os componentes do grupo indicado
 ☑ Deploy publicado no Vercel (link funcional)
-☑ Repositório GitHub organizado e documentado
+☑ Repositório  organizado e documentado
 ☑ README com link do deploy e instruções completas
 ☑ Relatório final ampliado (FINAL_REPORT.md)
 ☑ Aprendizados documentados

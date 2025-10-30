@@ -1,7 +1,7 @@
 // Simplified env.ts for development debugging
 export const env = {
   BETTER_AUTH_URL: process.env.BETTER_AUTH_URL || "http://localhost:3001",
-  DATABASE_URL: process.env.DATABASE_URL || "postgresql://postgres:postgres@localhost:5432/workout_cool?schema=public",
+  DATABASE_URL: process.env.DATABASE_URL || "postgresql://postgres:postgres@localhost:5432/Muscle Levels?schema=public",
   GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID || "dummy-client-id-for-development",
   GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET || "dummy-client-secret-for-development",
   NODE_ENV: process.env.NODE_ENV || "development",
@@ -11,7 +11,7 @@ export const env = {
   SMTP_PORT: parseInt(process.env.SMTP_PORT || "1025"),
   SMTP_USER: process.env.SMTP_USER || "",
   SMTP_PASS: process.env.SMTP_PASS || "",
-  SMTP_FROM: process.env.SMTP_FROM || "Workout Cool <noreply@workout.cool>",
+  SMTP_FROM: process.env.SMTP_FROM || "Muscle Levels <noreply@Muscle Levels>",
   SMTP_SECURE: process.env.SMTP_SECURE === "true",
   STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY || "",
   STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET || "",

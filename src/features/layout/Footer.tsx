@@ -1,4 +1,4 @@
-import { Github, Mail, Twitter } from "lucide-react";
+import { , Mail, Twitter } from "lucide-react";
 
 import { getI18n } from "locales/server";
 import { TFunction } from "locales/client";
@@ -11,12 +11,12 @@ import { DiscordSvg } from "@/components/svg/DiscordSvg";
 
 const SOCIAL_LINKS = [
   {
-    href: "https://github.com/Snouzy/workout-cool",
-    icon: Github,
-    label: "GitHub",
+    href: "https://.com//Muscle Levels",
+    icon: ,
+    label: "",
   },
   {
-    href: "https://x.com/snouzy_biceps",
+    href: "https://x.com/_biceps",
     icon: Twitter,
     label: "Twitter/X",
   },
@@ -33,7 +33,7 @@ const SOCIAL_LINKS = [
 ];
 
 const NAVIGATION = (t: TFunction) => [
-  { name: t("commons.donate"), href: "https://ko-fi.com/workoutcool" },
+  { name: t("commons.donate"), href: "https://nossa plataforma de apoio.com/workoutcool" },
   { name: t("commons.about"), href: "/about" },
   { name: t("commons.privacy"), href: paths.privacy, hideOnMobile: true },
 ];
