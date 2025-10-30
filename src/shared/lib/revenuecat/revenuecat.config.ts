@@ -13,7 +13,7 @@ export class RevenueCatConfig {
   static getSecretKey(): string {
     const secretKey = env.REVENUECAT_SECRET_KEY;
     if (!secretKey) {
-      throw new Error("REVENUECAT_SECRET_KEY environment variable is required");
+      return "dummy-secret-key"; // Para TCC sem billing
     }
     return secretKey;
   }
@@ -24,7 +24,7 @@ export class RevenueCatConfig {
   static getWebhookSecret(): string {
     const webhookSecret = env.REVENUECAT_WEBHOOK_SECRET;
     if (!webhookSecret) {
-      throw new Error("REVENUECAT_WEBHOOK_SECRET environment variable is required");
+      return "dummy-webhook-secret"; // Para TCC sem billing
     }
     return webhookSecret;
   }
