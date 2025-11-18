@@ -1,23 +1,12 @@
-import { SiteConfig } from "@/shared/config/site-config";
-
-/**
- * This method return the server URL based on the environment.
- */
-export const getServerUrl = () => {
-  if (typeof window !== "undefined") {
+export function getServerUrl(): string {
+  // Verifica se está rodando no servidor ou no cliente
+  if (typeof window !== 'undefined') {
+    // Cliente: usa a URL atual do navegador
     return window.location.origin;
   }
-
-  // If we are in production, we return the production URL.
-  if (process.env.VERCEL_ENV === "production") {
-    return SiteConfig.prodUrl;
-  }
-
-  // If we are in "stage" environment, we return the staging URL.
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`;
-  }
-
-  // If we are in development, we return the localhost URL.
-  return "http://localhost:3000";
-};
+  
+  // Servidor: usa variáveis de ambiente ou fallback
+  return process.env.NEXT_PUBLIC_SITE_URL || 
+         process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` :
+         'http://localhost:3000';
+}

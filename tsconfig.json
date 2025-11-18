@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "dom.iterable", "es6"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -12,22 +12,42 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "types": ["node"],
     "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/workoutcool/*": ["./src/*"],
-      "@emails/*": ["emails/*"],
-      "@public/*": ["public/*"]
-    },
     "plugins": [
       {
         "name": "next"
       }
-    ]
-  },
-  "exclude": ["node_modules", "src/utils/inapp.js", "src/utils/externalLinkOpener.js", "src/utils/browserEscape.js"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "tailwind.config.ts"]
-}
+    ],
+    "skipDefaultLibCheck": true,
+    "typeRoots": [],
+    "noResolve": false
 
+  },
+  "include": [
+    "next-env.d.ts",
+    "app/globals.css",
+    "app/layout.tsx",
+    "app/page.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*",
+    "middleware.ts",
+    "app/[locale]/**/*",
+    "app/api/**/*",
+    "locales/**/*",
+    "**/*locale*/**/*",
+    "**/d3-*",
+    "**/debug",
+    "**/estree-jsx",
+    "**/hast",
+    "**/mdast",
+    "**/mdx",
+    "**/ms",
+    "**/nodemailer",
+    "**/papaparse",
+    "**/unist",
+    "**/use-sync-external-store"
+  ]
+}

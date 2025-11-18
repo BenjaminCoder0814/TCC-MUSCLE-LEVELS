@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 
+
 export async function GET() {
-  // Redirect to Ezoic's ads.txt manager
+  // Redirect to Ezoic"s ads.txt manager
   // Replace 19390 with your actual Ezoic Account ID if different
   const ezoicAdsUrl = "https://srv.adstxtmanager.com/19390/muscle-levels";
 
@@ -21,7 +22,7 @@ export async function GET() {
       });
     }
 
-    // If Ezoic's endpoint fails, fallback to existing Google AdSense entry
+    // If Ezoic"s endpoint fails, fallback to existing Google AdSense entry
     const fallbackContent = "google.com, pub-3437447245301146, DIRECT, f08c47fec0942fa0";
 
     return new NextResponse(fallbackContent, {
@@ -30,7 +31,7 @@ export async function GET() {
         "Cache-Control": "public, max-age=3600",
       },
     });
-  } catch (error) {
+  } catch (_error) {
     // On error, return the existing Google AdSense entry
     const fallbackContent = "google.com, pub-3437447245301146, DIRECT, f08c47fec0942fa0";
 

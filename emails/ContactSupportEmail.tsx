@@ -1,5 +1,7 @@
 import * as React from "react";
+
 import { Body, Container, Head, Heading, Hr, Html, Preview, Section, Text, Tailwind } from "@react-email/components";
+
 
 interface ContactSupportEmailProps {
   email: string;

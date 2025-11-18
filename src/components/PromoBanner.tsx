@@ -1,87 +1,49 @@
-'use client'
-
-import Link from "next/link"
-import { ArrowRight, Dumbbell, Target, Grid3x3, BarChart3, Trophy } from "lucide-react"
+import Link from 'next/link';
 
 interface PromoBannerProps {
-  title: string
-  description: string
-  href: string
-  ctaText?: string
-  iconName?: "Dumbbell" | "Target" | "Grid3x3" | "BarChart3" | "Trophy"
-  emoji?: string
-  gradient?: string
-  variant?: "primary" | "secondary" | "accent"
+  title: string;
+  description: string;
+  href: string;
+  ctaText: string;
+  iconName: string;
+  gradient: string;
 }
 
-export default function PromoBanner({
-  title,
-  description,
-  href,
-  ctaText = "Saiba mais",
-  iconName,
-  emoji,
-  gradient = "from-blue-500 to-cyan-500",
-  variant = "primary"
+export function PromoBanner({ 
+  title, 
+  description, 
+  href, 
+  ctaText, 
+  iconName, 
+  gradient 
 }: PromoBannerProps) {
-  const variants = {
-    primary: "bg-gradient-to-r text-white shadow-lg",
-    secondary: "bg-white border border-gray-200 text-gray-900 shadow-md",
-    accent: "bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-200 text-gray-900"
-  }
-
-  const getIcon = () => {
-    switch(iconName) {
-      case "Dumbbell": return Dumbbell
-      case "Target": return Target
-      case "Grid3x3": return Grid3x3
-      case "BarChart3": return BarChart3
-      case "Trophy": return Trophy
-      default: return null
+  // Ícones simples usando emojis
+  const getIcon = (name: string) => {
+    switch(name) {
+      case 'Dumbbell': return '💪';
+      case 'BarChart': return '📊';
+      case 'Users': return '👥';
+      case 'Zap': return '⚡';
+      default: return '💪';
     }
-  }
-
-  const Icon = getIcon()
+  };
 
   return (
-    <div className={`${variants[variant]} ${variant === 'primary' ? gradient : ''} rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}>
-      <div className="flex items-start justify-between">
-        <div className="flex-1">
-          <div className="flex items-center gap-3 mb-4">
-            {Icon && (
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                variant === 'primary' ? 'bg-white/20' : `bg-gradient-to-r ${gradient}`
-              }`}>
-                <Icon className={`w-6 h-6 ${variant === 'primary' ? 'text-white' : 'text-white'}`} />
-              </div>
-            )}
-            {emoji && !Icon && (
-              <span className="text-4xl">{emoji}</span>
-            )}
-            <h3 className={`text-2xl font-bold ${variant === 'primary' ? 'text-white' : 'text-gray-900'}`}>
-              {title}
-            </h3>
-          </div>
-          
-          <p className={`text-lg mb-6 leading-relaxed ${
-            variant === 'primary' ? 'text-white/90' : 'text-gray-600'
-          }`}>
-            {description}
-          </p>
-          
-          <Link 
-            href={href}
-            className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all transform hover:scale-105 ${
-              variant === 'primary' 
-                ? 'bg-white text-gray-900 hover:bg-gray-100' 
-                : `bg-gradient-to-r ${gradient} text-white hover:shadow-lg`
-            }`}
-          >
-            {ctaText}
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+    <div className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${gradient} p-8 text-white shadow-xl`}>
+      <div className="relative z-10">
+        <div className="mb-4">
+          <div className="text-4xl">{getIcon(iconName)}</div>
         </div>
+        <h3 className="text-2xl font-bold mb-3">{title}</h3>
+        <p className="text-white/90 mb-6 leading-relaxed">{description}</p>
+        <Link 
+          href={href}
+          className="inline-block bg-white text-slate-900 hover:bg-white/90 font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+        >
+          {ctaText}
+        </Link>
       </div>
+      <div className="absolute inset-0 bg-black/10" />
     </div>
-  )
+  );
 }

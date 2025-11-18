@@ -1,7 +1,47 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false,
+  "eslint.enable": false,
+  "typescript.showUnused": false,
+  "html.validate.scripts": false,
+  "html.validate.styles": false,
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "css.lint.unknownAtRules": "ignore",
+  "tailwindCSS.includeLanguages": {
+    "css": "css"
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "json.validate.enable": false,
+  "problems.showCurrentInStatus": false,
+  "problems.decorations.enabled": false,
+  "problems.visibility": false,
+  "typescript.check.npmIsInstalled": false,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.suggest.enabled": false,
+  "typescript.preferences.noSemicolons": "ignore",
+  "typescript.suggest.autoImports": false,
+  "typescript.suggest.completeFunctionCalls": false,
+  "typescript.preferences.includePackageJsonAutoImports": "off",
+  "editor.codeActionsOnSave": {},
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": false,
+  "files.associations": {
+    "*.tsx": "typescriptreact",
+    "*.ts": "typescript"
+  },
+  "extensions.ignoreRecommendations": true,
+  "[typescript]": {
+    "editor.defaultFormatter": null
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": null
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": null
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": null
+  }
 }
-

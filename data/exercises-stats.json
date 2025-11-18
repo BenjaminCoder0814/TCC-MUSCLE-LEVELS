@@ -1,0 +1,16 @@
+{
+  "totalExercises": 10,
+  "createdAt": "2025-11-10T22:11:55.706Z",
+  "source": "CSV",
+  "muscles": [
+    "CORE",
+    "FULL_BODY",
+    "BACK",
+    "LEGS",
+    "ARMS"
+  ],
+  "types": [
+    "STRENGTH",
+    "CARDIO"
+  ]
+}

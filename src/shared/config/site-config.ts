@@ -1,50 +1,23 @@
 export const SiteConfig = {
-  title: "Muscle Levels",
-  description: "Plataforma moderna de fitness com base de dados completa de exercícios",
+  title: "Muscle Levels — Transformação Fitness Inteligente",
+  description: "A plataforma brasileira mais completa para fitness. Avaliação corporal, treinos personalizados com IA e acompanhamento profissional. Transforme seu corpo com ciência! 💪",
+  url: "https://muscle-levels.com",
+  siteName: "Muscle Levels",
+  creator: "@muscle_levels",
   keywords: [
-    "fitness",
-    "treino",
-    "exercício",
-    "musculação",
     "muscle levels",
-    "treinamento",
-    "academia",
-    "app fitness",
-    "planejador de treinos",
-    "base de dados de exercícios",
+    "treino personalizado",
+    "fitness brasil", 
+    "musculação",
+    "academia online",
+    "análise corporal",
+    "personal trainer",
+    "exercícios personalizados",
+    "transformação corporal"
   ],
-  prodUrl: "https://muscle-levels.com",
-  logo: "/images/logo.png",
-  domain: "muscle-levels.com",
-  appIcon: "/images/logo4.jpg",
-  company: {
-    name: "Muscle Levels",
-    address: "Brasil",
-  },
-  brand: {
-    primary: "#007291",
-  },
-  email: {
-    from: "Muscle Levels <noreply@muscle-levels.com>",
-    contact: "contato@muscle-levels.com",
-  },
-  maker: {
-    image: "https://muscle-levels.com/images/me/twitter-en.jpg",
-    website: "https://muscle-levels.com",
+  links: {
+    github: "https://github.com/muscle-levels",
     twitter: "https://twitter.com/muscle_levels",
-    name: "Muscle Levels",
-  },
-  auth: {
-    password: false,
-  },
-  seo: {
-    ogImage: {
-      width: 1200,
-      height: 630,
-    },
-    twitterHandle: "@muscle_levels",
-    applicationName: "Muscle Levels",
-    category: "fitness",
-    classification: "Fitness & Saúde",
-  },
+    instagram: "https://instagram.com/muscle_levels"
+  }
 };

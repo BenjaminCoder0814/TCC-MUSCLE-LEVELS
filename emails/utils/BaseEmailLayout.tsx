@@ -1,7 +1,10 @@
 import * as React from "react";
+
 import { Body, Container, Head, Hr, Html, Img, Preview, Section, Text, Tailwind } from "@react-email/components";
 
 import { SiteConfig } from "@/shared/config/site-config";
+
+
 
 interface BaseEmailLayoutProps {
   previewText: string;
@@ -11,7 +14,7 @@ interface BaseEmailLayoutProps {
 // Consistent styling variables
 const primaryColor = "#2563EB"; // Blue-600
 // eslint-disable-next-line quotes
-const fontFamily = 'Inter, "Helvetica Neue", Helvetica, Arial, sans-serif';
+const fontFamily = "Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif";
 const containerPadding = "32px"; // p-8
 const mainBgColor = "#f9fafb"; // bg-gray-50
 const containerBgColor = "#ffffff"; // bg-white

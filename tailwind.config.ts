@@ -67,6 +67,11 @@ const config: Config = {
         "1sm": "0.80rem",
       },
       colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         popover: {
           DEFAULT: "#FFF",
           dark: "#232324",
